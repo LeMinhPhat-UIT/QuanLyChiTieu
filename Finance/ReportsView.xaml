@@ -47,10 +47,10 @@
             <materialDesign:Card Grid.Row="0" Margin="5">
                 <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left">
                     <lvc:CartesianChart.AxisX>
-                        <lvc:Axis Title="Salesman" Labels="{Binding Labels}"></lvc:Axis>
+                        <lvc:Axis Title="Loại chi tiêu" Labels="{Binding Labels}"></lvc:Axis>
                     </lvc:CartesianChart.AxisX>
                     <lvc:CartesianChart.AxisY>
-                        <lvc:Axis Title="Sold Apps" LabelFormatter="{Binding Formatter}"></lvc:Axis>
+                        <lvc:Axis Title="VND" LabelFormatter="{Binding Formatter}"></lvc:Axis>
                     </lvc:CartesianChart.AxisY>
                 </lvc:CartesianChart>
             </materialDesign:Card>
@@ -66,12 +66,12 @@
             </materialDesign:Card>
 
             <materialDesign:Card Grid.Row="2" Margin="5">
-                <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left">
+                <lvc:CartesianChart Series="{Binding SeriesCollection2}" LegendLocation="Left">
                     <lvc:CartesianChart.AxisX>
-                        <lvc:Axis Title="Salesman" Labels="{Binding Labels}"></lvc:Axis>
+                        <lvc:Axis Title="Loại thu nhập" Labels="{Binding Labels2}"></lvc:Axis>
                     </lvc:CartesianChart.AxisX>
                     <lvc:CartesianChart.AxisY>
-                        <lvc:Axis Title="Sold Apps" LabelFormatter="{Binding Formatter}"></lvc:Axis>
+                        <lvc:Axis Title="VND" LabelFormatter="{Binding Formatter2}"></lvc:Axis>
                     </lvc:CartesianChart.AxisY>
                 </lvc:CartesianChart>
             </materialDesign:Card>
