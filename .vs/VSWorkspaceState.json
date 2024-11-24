@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BusinessLogic",
+    "\\BusinessLogic\\Helpers",
+    "\\BusinessLogic\\Services",
+    "\\Finance"
+  ],
+  "SelectedNode": "\\Finance\\MainWindow.xaml.cs",
+  "PreviewInSolutionExplorer": false
+}

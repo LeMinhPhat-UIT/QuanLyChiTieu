@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Finance.ViewModel;
+using LiveCharts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using QuanLyChiTieu.BusinessLogic.Services;
+using QuanLyChiTieu.BusinessLogic.OtherClasses;
 
 namespace Finance
 {
@@ -22,6 +26,7 @@ namespace Finance
         public BudgetView()
         {
             InitializeComponent();
+            BudgetService.CreateWallet("wallet1", "Tiền Mặt", "100", new DateTime(2005, 10, 19));
         }
     }
 }

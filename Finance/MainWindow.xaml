@@ -144,7 +144,7 @@
 
                 <!--Filter-->
                 <Grid Grid.Row="0">
-                    <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" >
+                    <lvc:CartesianChart Name="Sery"  Series="{Binding SeriesCollection}" LegendLocation="Right" >
                         <lvc:CartesianChart.AxisY>
                             <lvc:Axis Title="VND" LabelFormatter="{Binding YFormatter}"></lvc:Axis>
                         </lvc:CartesianChart.AxisY>
