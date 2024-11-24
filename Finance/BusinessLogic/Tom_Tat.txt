@@ -1,112 +1,145 @@
-BudgetService:
-    + static Dictionary<Catalog, (double, double)> _budgetOfEachCatalog  -->  'Lưu ngân sách theo từng Catalog'
-    + static double totalBudget  -->  'Tổng ngân sách'
+Tình trạng:
+    1. Các hàm đã được test và chạy đúng mong đợi. Tuy nhiên các hàm này chỉ có thể tương tác trực tiếp với các cấu trúc (class) định nghĩa sẵn-do đó nếu muốn tương tác với DataBase thì phải truyền dữ liệu từ DataBase vào các cấu trúc (class) phù hợp.
 
-    + void SetBudget(Catalog, double)  -->  'Định ngân sách cho một Catalog'
-    + void UpdateBudget(Catalog, double)  -->  'Chỉnh sửa ngân sách cho một Catalog'
-    + void DeleteBudget(Catalog)  -->  'Xóa ngân sách của một Catalog'
-    + (double, double) GetRemainingBudget(Catalog? catalog = null)  -->  'Lấy ngân sách và tỉ lệ phần trăm còn lại của một Catalog. Nếu null thì sẽ mặc định tính sách của toàn bộ dữ liệu'
+    2. Tuy các hàm có chức năng 'Thêm', 'Xóa', 'Sửa' đã chạy đúng nhưng chưa nối vào các button tương ứng trên giao diện.
 
-FinanceService:
-    + static List<Transaction> _allTransaction -->  'Lưu tất cả giao dịch'
-    + static List<Wallet> List  -->  'Lưu tất cả các tài khoản'
+    3. Các List, Dictionary chứa các dữ liệu đều có thể load lên giao diện thông qua ItemsSource. Nhưng đứa viết hàm ngu về Binding quá nên không trực tiếp kết nối được.
 
-    + static Wallet CreateAccount(string WalletName, WalletType WalletType, double Money)  -->  'Tạo một Wallet mới với Tên-Kiểu-Lượng Tiền'
-    + static void DeleteAccount(int id)  -->  'Xóa một Wallet theo ID'
-    + static void UpdateAccount(int id, string WalletName="", WalletType? WalletType=null, double Money=-1)  -->  'Chỉnh sửa thông tin của một Wallet'
-    + static void Alert()  -->  'Thông báo số dư của Wallet không đủ để thực hiện giao dịch'
-    + static void Transfer(Transaction transaction, Wallet fromAccount, Wallet toAccount)  -->  'Chuyển khoản giữa 2 Wallet'
-    + static void EarnMoney(Transaction transaction, Wallet Wallet)  -->  'Tạo thu nhập cho một Wallet'
-    + static void SpendMoney(Transaction transaction, Wallet Wallet)  -->  'Tạo chi tiêu cho một Wallet'
-    + static void DeleteTransaction(int idTransaction, int idAccount)  -->  'Xóa một giao dịch dựa trên ID giao dịch và ID tài khoản chứa giao dịch'
-    + static void UpdateTransaction(int id, Wallet? Wallet=null, Catalog? catalog=null, MoneyFlow? TransactionType=null, double Money=-1, string note="")  -->  'Cập nhật thông tin của một giao dịch'
-    + static List<Transaction> GetTransactionHistory(Wallet Wallet)  -->  'Lấy toàn bộ lịch sử giao dịch của 1 Wallet'
-    + static List<Transaction> GetAllDataByFlow(MoneyFlow TransactionType, DateTime startDate, DateTime endDate)  -->  'Lấy dữ liệu dựa trên dòng tiền và giữa 2 khoảng thời gian. (Hỗ trợ cho việc tính toán thống kê từ ngày x tới ngày y)'
+    4. DÒNG TIỀN và LOẠI VÍ TIỀN do ít nên đã được thêm sẵn trong các class tương ứng. Còn DANH MỤC (Catalog) do có thể nhiều nên cần load từ DataBase
 
-DateHelper:
-    - static int[] _dayOfMonth = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }  -->  'Số ngày của từng tháng'
+Tóm tắt:
 
-    + static bool CheckValid(string date)  -->  'Kiểm tra ngày hợp lệ'
-    + static bool isLeapYear(int year)  -->  'Kiểm tra năm nhuận'
-    + static void UpdateDaysInMonth(int year)  -->  'Cập nhật ngày của năm nhuận'
-    + static bool isBetween(DateTime date, DateTime start, DateTime end)  -->  'Kiểm tra xem date có nằm giữa startDate và endDate không'
-    + static DateTime GetCurrentDate()  -->  'Lấy ngày hiện hành'
-    + static TimeSpan GetDayBetween(DateTime start, DateTime end)  -->  'Lấy thời gian giữa startDate và endDate'
-    + static int GetNumberOfDaysInMonth(int year, int month)  -->  'Lấy số ngày trong tháng của năm'
+BusinessLogic:
+    Helpers:
+        DateHelper.cs
+        StatisticHelper.cs
+    Services:
+        BudgetService.cs
+        FinanceService.cs
+    SupportedClasses:
+        Catalog.cs
+        StatisticReport.cs
+        Transaction.cs
+        Wallet.cs
 
-StatisticHelper:
-    ---
+Chi tiết:
+    DateHelper.cs:
+        [attributes]:
+        - static int[] _dayOfMonth = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }
 
-    + static double GetIncome(DateTime startDate, DateTime endDate)  -->  'Tính tổng thu nhập theo ngày'
-    + static double GetExpense(DateTime startDate, DateTime endDate)  -->  'Tính tổng chi tiêu theo ngày'
-    + static double GetBalance(DateTime startDate, DateTime endDate)  -->  'Tính giá trị chênh lệch giữa thu nhập và chi tiêu'
-    + static Chart GetDataForChart(MoneyFlow TransactionType, DateTime startDate, DateTime endDate)  -->  'Lấy dữ liệu cho biểu đồ'
-    + static void GenerateReport(Chart chart, string filePath)  -->  'Chuyển dữ liệu biểu đồ ra file. Thông tin lưu có cấu trúc như sau:
-                                                                      Id:
-                                                                      Tổng, Trung Bình, Trung Vị, Min, Max
-                                                                      Catalog, Lượng tiền, Tỉ lệ phần trăm
-                                                                     '
+        [methods]:
+        + static bool isValid(string date) // Kiểm tra tính hợp lệ của ngày
+        + static bool isLeapYear(int year) // Kiểm tra năm nhuận
+        - static void UpdateDaysInMonth(int year) // Nếu là năm nhuận sẽ cập nhật ngày của tháng 2 trong _dayOfMonth
+        + static bool isBetween(DateTime date, DateTime start, DateTime end) // Kiểm tra ngày có nằm giữa không
+        + static DateTime GetCurrentDate() // Lấy ngày hiện hành
+        + static TimeSpan GetDayBetween(DateTime start, DateTime end) // Tính lượng ngày giữa 2 ngày
+        + static int GetNumberOfDaysInMonth(int year, int month)  // Lấy số ngày của tháng
 
+    StatisticHelper.cs:
+        [attributes]:
 
-Các class hỗ trợ:
+        [methods]:
+        + static double GetIncome(DateTime startDate, DateTime endDate) // Tính tổng thu nhập
+        + static double GetExpense(DateTime startDate, DateTime endDate) // Tính tổng chi tiêu
+        + static double GetBalance(DateTime startDate, DateTime endDate) // Tính chênh lệch giữa thu nhập và chi tiêu
+        + static Tuple<SeriesCollection, StatisticReport>  GetChartData(string moneyFlow, DateTime startDate, DateTime endDate) // Trả ra dữ liệu của biểu đồ và bảng thông số
 
-WalletType:  -->  'Định nghĩa các kiểu Wallet'
-    + static WalletType Cash = new WalletType("Tiền Mặt");
-    + static WalletType DebitCard = new WalletType("Thẻ Ghi Nợ");
-    + static WalletType CreditCard = new WalletType("Thẻ Tín Dụng");
-    + static WalletType VirtualAccount = new WalletType("Tài Khoản Ảo");
-    + static WalletType Investment = new WalletType("Đầu Tư");
-    + static WalletType Debt = new WalletType("Nợ Tôi");
-    + static WalletType MyDebt = new WalletType("Tôi Nợ");
-    + string WalletName { get; set; }
+    BudgetService.cs:
+        [attributes]:
+        + static Dictionary<int, Wallet> _allWallets // Chứa tất cả các ví tiền
+        
+        [methods]:
+        + static Wallet CreateWallet(string walletName, string type, string money, DateTime updateDate) // Tạo ví tiền mới
+        + static void DeleteWallet(int walletID) // Xóa ví tiền
+        + static void UpdateWallet(int walletID, string? newWalletName, string? newWalletType, string? newMoney, DateTime? updateDate = null) // Cập nhật ví tiền
 
-    - WalletType(string WalletName)  -->  'Không cho phép tạo thêm loại Wallet'
+    FinanceService.cs:
+        [attributes]:
+        + static Dictionary<int, Transaction> _allTransaction // Chứa tất cả giao dịch
 
-Wallet:
-    - int id  -->  'Thể hiện đã có bao nhiêu Wallet được tạo ra. (Chỉ đúng nếu không có Wallet nào bị xóa)'
-    - List<Transaction> _allTransactions  -->  'Chứa các giao dịch của Wallet'
-    + int Id  -->  'Id của Wallet'
-    + string WalletName  -->  'Tên của Wallet'
-    + WalletType WalletType  -->  'Loại Wallet'
-    + double Money  -->  'Lượng Tiền'
+        [methods]:
+        + static void Alert() // Thông báo không đủ tiền
+        + static void AddTransaction(int transactionID, int walletID) // Thêm giao dịch vào 1 ví tiền
+        + static void DeleteTransaction(int transactionID) // Xóa giao dịch
+        + static void UpdateTransaction(int transactionID, string? newTransactionName, string? newMoney, string? newMoneyFlow, string? newCatalog, int newWalletID = -1, DateTime? date = null) // Cập nhật giao dịch
+        + static List<Transaction> GetAllDataByFlow(MoneyFlow transactionMoneyFlow, DateTime startDate, DateTime endDate) // Lấy dữ liệu theo dòng tiền
 
-    + void AddTransaction(Transaction transaction)  -->  'Thêm một giao dịch'
-    + void DeleteTransaction(Transaction transaction)  -->  'Xóa một giao dịch'
-    + List<Transaction> GetAllTransactions()  -->  'Lấy tất cả giao dịch của Wallet'
+    Catalog.cs:
+        [attributes]:
+        + static Dictionary<string, Catalog> _allCatalogs // Chứa tất cả danh mục
+        + string Name // Tên danh mục
+        + MoneyFlow MoneyFlow // Loại dòng tiền của danh mục
 
-Catalog:
-    - static readonly Dictionary<string, Catalog> allCatalogs  -->  'Toàn bộ danh mục đã được tạo. (Có thể tạo thêm, mặc định chưa có)'
-    + string WalletName  -->  'Tên danh mục'
+        [methods]:
+        - Catalog(string name, string moneyFlow) // Khởi tạo danh mục (phải thông qua hàm)
+        + static Catalog CreateCatalog(string name, string moneyFlow) // Tạo danh mục
+        + static void DeleteCatalog(string name) // Xóa danh mục
 
-    - Catalog(string WalletName)  -->  'Không cho phép tự ý tạo mà không thông qua hàm'
-    + static Catalog CreateCatalog(string WalletName)  -->  'Tạo một danh mục mới'
-    + static void DeleteCatalog(string WalletName)  -->  'Xóa danh mục (nếu có)'
+    MoneyFlow.cs:
+        [attributes]:
+        + static MoneyFlow Income // Thu Nhập
+        + static MoneyFlow Expense // Chi Tiêu
+        + static Dictionary<string, MoneyFlow> _allMoneyFlows // Chứa mọi dòng tiền
+        + string Name // Tên loại dòng tiền
 
-Chart:
-    - static int cnt
-    + double[] SummaryStatistic; //total, mean, median, min, max  -->  'Các thông số để vẽ biểu đồ, chú thích'
-    + int Id  -->  'Id biểu đồ'
-    + Dictionary<Catalog, (double Cost, double Percent)> Data  -->  'Với từng danh mục thì lượng tiền đã dùng, chiếm bao nhiêu phần trăm trên tổng đang xét. (Xét riêng thu và chi)'
+        [methods]:
+        - MoneyFlow(string name) // Khởi tạo dòng tiền (không được phép tạo thêm)
 
-    + Chart()
-    + void AddData(Catalog catalog, double cost, double percent)  -->  'Thêm dữ liệu vào Data'
+    StatisticReport.cs:
+        [attributes]:
+        + double Total // Tổng
+        + double Mean // Trung bình
+        + double Median // Trung Vị
+        + double Min // Min
+        + double Max // Max
 
-MoneyFlow:
-    + static MoneyFlow Income = new MoneyFlow("Thu Nhập");
-    + static MoneyFlow Expense = new MoneyFlow("Chi Tiêu");
+        [methods]:
+        + StatisticReport(double total=0, double mean=0, double median=0, double min=0, double max=0) // Khởi tạo báo cóa
 
-    + string WalletName  -->  'Tên của dòng tiền'
-    - MoneyFlow(string WalletName)  -->  'Không cho tạo mới dòng tiền. (Chỉ có dòng ra và dòng vào)'
+    Transaction.cs:
+        [attributes]:
+        - static int cnt // Đếm id
+        + int ID
+        + string TransactionName
+        + double Money
+        + MoneyFlow TransactionMoneyFlow
+        + Catalog Catalog
+        + Wallet Wallet
+        + DateTime TransactionDate
 
-Transaction:
-    - static int _cnt = 0;
-    + int Id 
-    + Catalog Catalog 
-    + MoneyFlow TransactionType 
-    + DateTime Date
-    + double Money
-    + string Note
+        [methods]:
+        + Transaction(string transactionName, string money, string transactionTypeName, string catalogName, DateTime date) // Khởi tạo giao dịch
+        + static Transaction CreateTransaction(string transactionName, string money, string transactionTypeName, string catalogName, DateTime date) // Tạo giao dịch
+        + Transaction SetAsIncome() // Cập nhật dòng tiền vào cho giao dịch
+        + Transaction SetAsExpense() // Cập nhật dòng tiền ra cho giao dịch
 
-    + Transaction(DateTime date, double Money, string note)  -->  'Tạo giao dịch mới'
-    + Transaction SetAsIncome()  -->  'Set loại giao dịch là thu nhập'
-    + Transaction SetAsExpense()  -->  'Set loại giao dịch là chi tiêu'
+    WalletType.cs:
+        [attributes]:
+        + static WalletType Cash // Tiền Mặt
+        + static WalletType DebitCard // Thẻ Ghi Nợ
+        + static WalletType CreditCard // Thẻ Tín Dụng
+        + static WalletType VirtualAccount // Tài Khoản Ảo
+        + static WalletType Investment // Đầu Tư
+        + static WalletType Debt // Nợ Tôi
+        + static WalletType MyDebt // Tôi Nợ
+        + static Dictionary<string, WalletType> _allWalletTypes // Chứa tất cả loại ví tiền
+        + string Name { get; set; }
+
+        [methods]:
+        - WalletType(string name) // Khởi tạo ví tiền (không cho phép tạo thêm)
+
+    Wallet.cs:
+        [attributes]:
+        - static int _cnt // Đếm Id
+        - static Dictionary<int, Transaction> _allTransactions // Chứa tất cả các giao dịch thông qua ví tiền này
+        + int ID
+        + string WalletName
+        + WalletType WalletType
+        + double Money
+        + DateTime UpdateDate
+
+        [methods]:
+        + Wallet(string walletName, string type, string money, DateTime updateDate) // Khởi tạo ví tiền
+        + void AddTransaction(int transactionID) // Thêm giao dịch
+        + void DeleteTransaction(int transactionID) // Xóa giao dịch
