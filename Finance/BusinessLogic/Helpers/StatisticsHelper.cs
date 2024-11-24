@@ -37,7 +37,7 @@ namespace QuanLyChiTieu.BusinessLogic.Helpers
             total=mean=median=min=max=0;
 
             MoneyFlow transactionMoneyFlow = MoneyFlow._allMoneyFlows[moneyFlow];
-            var dataByFlow = FinanceService.GetAllDataByFlow(transactionMoneyFlow, startDate, endDate);
+            var dataByFlow = FinanceService.GetAllDataByFlow(transactionMoneyFlow.ToString(), startDate, endDate); //Mới chỉnh lại để build được
             var values = new ChartValues<double>();
 
             foreach (var data in dataByFlow)

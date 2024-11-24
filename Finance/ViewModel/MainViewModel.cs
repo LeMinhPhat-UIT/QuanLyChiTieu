@@ -11,20 +11,12 @@ namespace Finance.ViewModel
     public class MainViewModel : BaseViewModel
     {
         public bool IsLoaded = false;
-        public ICommand LoadedWindowCommand { get; set; }
         public ICommand AddTransactionViewCommand { get; set; }
         public ICommand BudgetViewCommand { get; set; }
         public ICommand ReportsViewCommand { get; set; }
         public ICommand UserWindowCommand { get; set; }
         public MainViewModel()
         {
-            LoadedWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => {
-                IsLoaded = true;
-                LoginWindow loginWindow = new LoginWindow();
-                loginWindow.ShowDialog();
-            }
-            );
-
             AddTransactionViewCommand = new RelayCommand<object>((p) => { return true; }, (p) => {
                 AddTransactionView Window = new AddTransactionView();
                 Window.ShowDialog();

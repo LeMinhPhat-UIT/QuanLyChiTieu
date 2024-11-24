@@ -61,7 +61,6 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
                     <Button Grid.Column="0" Command="{Binding AddTransactionViewCommand}" ToolTip="Thêm giao dịch">
@@ -114,24 +113,6 @@
                             </Grid>
                         </Grid>
                     </Button>
-
-                    <Button Grid.Column="3" Command="{Binding UserWindowCommand}" ToolTip="Người dùng">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-
-                            <Grid Grid.Row="0">
-                                <TextBlock HorizontalAlignment="Center" Text="Người dùng"></TextBlock>
-                            </Grid>
-
-                            <Grid Grid.Row="1">
-                                <materialDesign:PackIcon Width="25" Height="25" HorizontalAlignment="Center" Kind="AccountMultiple" />
-                            </Grid>
-                        </Grid>
-                    </Button>
-
                 </Grid>
             </Grid>
 
