@@ -43,12 +43,12 @@
             <materialDesign:Card Grid.Row="0" Margin="5">
                 <WrapPanel>
                     <TextBox materialDesign:HintAssist.Hint="Tên giao dịch" Margin="5 5 15 5" Text="{Binding TransactionName}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" />
-                    <TextBox materialDesign:HintAssist.Hint="Số tiền" Margin="5 5 15 5" Text="{Binding Money}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" />
+                    <TextBox materialDesign:HintAssist.Hint="Số tiền" Margin="5 5 15 5" Text="{Binding TransactionMoney}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" />
 
                     <ComboBox materialDesign:HintAssist.Hint="Dòng tiền" Margin="5 5 15 -3"
                               materialDesign:HintAssist.HintOpacity=".26"
                               IsEditable="False"
-                              ItemsSource="{Binding MoneyFlow, Mode=TwoWay}">
+                              ItemsSource="{Binding TransactionMoneyFlow, Mode=TwoWay}">
                         <!--Data mẫu
                         <ComboBoxItem> Chi tiêu </ComboBoxItem>
                         <ComboBoxItem> Thu nhập </ComboBoxItem>
@@ -58,7 +58,7 @@
                     <ComboBox materialDesign:HintAssist.Hint="Danh mục" Margin="5 5 15 -3"
                               materialDesign:HintAssist.HintOpacity=".26"
                               IsEditable="False"
-                              ItemsSource="{Binding Catalog, Mode=TwoWay}">
+                              ItemsSource="{Binding TransactionCatalog, Mode=TwoWay}">
                         <!--Data mẫu
                         tự thêm...
                         -->
@@ -67,7 +67,7 @@
                     <ComboBox materialDesign:HintAssist.Hint="Ví tiền" Margin="5 5 15 -3"
                               materialDesign:HintAssist.HintOpacity=".26"
                               IsEditable="False"
-                              ItemsSource="{Binding BudgetService, Mode=TwoWay}">
+                              ItemsSource="{Binding TransactionBudgetService, Mode=TwoWay}">
                         <!--Data mẫu
                         <ComboBoxItem> Tiền Mặt </ComboBoxItem>
                         <ComboBoxItem> Thẻ Tín Dụng </ComboBoxItem>
@@ -92,8 +92,10 @@
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Tên giao dịch" DisplayMemberBinding="{Binding TransactionName}"></GridViewColumn>
-                                <GridViewColumn Header="Số tiền" DisplayMemberBinding="{Binding Money}"></GridViewColumn>
-                                <GridViewColumn Header="Loại giao dịch" DisplayMemberBinding="{Binding TransactionType}"></GridViewColumn>
+                                <GridViewColumn Header="Số tiền" DisplayMemberBinding="{Binding TransactionMoney}"></GridViewColumn>
+                                <GridViewColumn Header="Dòng tiền" DisplayMemberBinding="{Binding TransactionMoneyFlow}"></GridViewColumn>
+                                <GridViewColumn Header="Danh mục" DisplayMemberBinding="{Binding TransactionCatalog}"></GridViewColumn>
+                                <GridViewColumn Header="Ví tiền" DisplayMemberBinding="{Binding TransactionBudgetService}"></GridViewColumn>
                                 <GridViewColumn Header="Ngày giao dịch" DisplayMemberBinding="{Binding TransactionDate}"></GridViewColumn>
                             </GridView>
                         </ListView.View>
