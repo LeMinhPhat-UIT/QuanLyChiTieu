@@ -23,19 +23,22 @@ namespace Finance
     /// </summary>
     public partial class ReportsView : Window
     {
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
-        public Func<double, string> Formatter { get; set; }
+        //public SeriesCollection SeriesCollection { get; set; }
+        //public string[] Labels { get; set; }
+        //public Func<double, string> Formatter { get; set; }
         public ReportsView()
         {
-            //SeriesCollection = new SeriesCollection()
+            //SeriesCollection = new SeriesCollection
             //{
             //    new ColumnSeries
             //    {
-            //        Title = "2015",
+            //        Title = "VND",
             //        Values = new ChartValues<double> { 10, 50, 39, 50 }
             //    }
             //};
+
+            //Labels = new[] { "Nấu ăn", "Khách sạn", "Đi chợ", "Xem phim" };
+            //Formatter = value => value.ToString("N0");
 
             InitializeComponent();
             DataContext = this;
