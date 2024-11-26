@@ -44,7 +44,7 @@
                 <WrapPanel Margin="0 0 0 10">
                     <TextBox materialDesign:HintAssist.Hint="Tên ví tiền" Margin="5 5 15 5" Text="{Binding WalletName}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" />
                     <TextBox materialDesign:HintAssist.Hint="Số tiền" Margin="5 5 15 5" Text="{Binding Money}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" />
-                    <ComboBox materialDesign:HintAssist.Hint="Loại ví tiền" Margin="5 5 15 -3"
+                    <ComboBox Name="walletTypeList" materialDesign:HintAssist.Hint="Loại ví tiền" Margin="5 5 15 -3"
                               materialDesign:HintAssist.HintOpacity=".26"
                               IsEditable="False"
                               ItemsSource="{Binding WalletType, Mode=TwoWay}">
@@ -59,7 +59,7 @@
 
             <materialDesign:Card Grid.Row="1" Margin="5">
                 <WrapPanel>
-                    <Button Command="{Binding AddCommand}" Content="Thêm" Margin="5" Width="115"></Button>
+                    <Button Name="Add" Command="{Binding AddCommand}" Content="Thêm" Margin="5" Width="115"></Button>
                     <Button Command="{Binding EditCommand}" Content="Sửa" Margin="5" Width="115"></Button>
                     <Button Command="{Binding DeleteCommand}" Content="Xóa" Margin="5" Width="115"></Button>
                 </WrapPanel>

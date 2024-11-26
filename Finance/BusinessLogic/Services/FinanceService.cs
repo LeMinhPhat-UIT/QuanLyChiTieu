@@ -18,49 +18,41 @@ namespace QuanLyChiTieu.BusinessLogic.Services
 
         public static void AddTransaction(int transactionID, int walletID)
         {
-            Transaction transaction = _allTransaction[transactionID];
-            Wallet wallet = BudgetService._allWallets[walletID];
-            if(transaction.TransactionMoneyFlow == MoneyFlow.Expense)
-                if(transaction.Money > wallet.Money)
-                    Alert();
-            wallet.AddTransaction(transactionID);
-            if (transaction.TransactionMoneyFlow == MoneyFlow.Income)
-                wallet.Money += transaction.Money;
-            else wallet.Money -= transaction.Money;
+            /*
+            Lấy dữ liệu 'giao dịch' và 'ví tiền' thông qua ID
+            Nếu 'giao dịch' thuộc loại 'chi tiêu' thì tiền trong 'ví tiền' giảm, nếu 'thu nhập' thì tăng
+            Bonus: nếu 'giao dịch' thuộc loại 'chi tiêu' mà 'ví tiền' không đủ tài chính thì thông báo không đủ và không thực hiện giao dịch
+            */
         }
 
-        public static void DeleteTransaction(int transactionID)
+        public static void DeleteTransaction(List<int> transactionID)
         {
-            Transaction transaction = _allTransaction[transactionID];
-            Wallet wallet = transaction.Wallet;
-            wallet.DeleteTransaction(transactionID);
-            if (transaction.TransactionMoneyFlow == MoneyFlow.Income)
-                wallet.Money -= transaction.Money;
-            else
-                wallet.Money += transaction.Money;
-            _allTransaction.Remove(transactionID);
+            /*
+            Thực hiện xóa 'giao dịch' thông qua ID. (Truyền vào List là vì thông thường ta có thể chọn nhiều mục để xóa thay vì xóa từng mục)
+            Nếu 'giao dịch' thuộc loại 'chi tiêu' thì 'ví tiền' chứa giao dịch sẽ tăng trị giá, ngược lại với 'thu nhập'
+            */
         }
 
-        public static void UpdateTransaction(int transactionID, string? newTransactionName, string? newMoney, string? newMoneyFlow, string? newCatalog, int newWalletID = -1, DateTime? date = null)
+        public static void UpdateTransaction(int transactionID, string? newTransactionName, string? newMoney, string? newMoneyFlow, string? newCatalog, int? newWalletID, DateTime? date = null)
         {
-            Transaction transaction = _allTransaction[transactionID];
-            if(!string.IsNullOrEmpty(newTransactionName))
-                transaction.TransactionName = newTransactionName;
-            if (!string.IsNullOrEmpty(newMoney))
-                transaction.Money = Int32.Parse(newMoney);
-            if(newMoneyFlow != null)
-                transaction.TransactionMoneyFlow = MoneyFlow._allMoneyFlows[newMoneyFlow];
-            if (newCatalog != null)
-                transaction.Catalog = Catalog._allCatalogs[newCatalog];
-            if(newWalletID != -1)
-            {
-                transaction.Wallet.DeleteTransaction(transactionID);
-                Wallet newWallet = BudgetService._allWallets[newWalletID];
-                newWallet.AddTransaction(transactionID);
-                transaction.Wallet = newWallet;
-            }
-            if (date != null)
-                transaction.TransactionDate = (DateTime)date;
+            /*
+            Thực hiện cập nhật giao dịch thông qua ID
+            Thuộc tính nào bỏ trống thì sẽ không cập nhật
+            */
+        }
+
+        public static Catalog CreateCatalog(string name, string moneyFlow)
+        {
+            /*
+            Tạo catalog mới với name và dòng tiền 
+            */
+        }
+
+        public static void DeleteCatalog(string name) 
+        {
+            /*
+            Xóa catalog thông qua tên 
+            */
         }
 
         public static List<Transaction> GetAllDataByFlow(string moneyFlow, DateTime startDate, DateTime endDate)
@@ -68,7 +60,6 @@ namespace QuanLyChiTieu.BusinessLogic.Services
             MoneyFlow transactionMoneyFlow = MoneyFlow._allMoneyFlows[moneyFlow];
             return _allTransaction.Values.Where(x => x.TransactionMoneyFlow == transactionMoneyFlow && DateHelper.isBetween(x.TransactionDate, startDate, endDate))
                                      .ToList();
-
         }
     }
 }

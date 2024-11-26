@@ -10,11 +10,8 @@ namespace QuanLyChiTieu.BusinessLogic.SupportedClasses
 {
     public class MoneyFlow
     {
-        public static MoneyFlow Income { get; }
-        public static MoneyFlow Expense { get; }
-
         public static Dictionary<string, MoneyFlow> _allMoneyFlows { get; } = new Dictionary<string, MoneyFlow>();
-
+        
         public string Name { get; set; }
 
         private MoneyFlow(string name)
@@ -23,6 +20,8 @@ namespace QuanLyChiTieu.BusinessLogic.SupportedClasses
             _allMoneyFlows[name] = this;
         }
 
+        public static MoneyFlow Income { get; }
+        public static MoneyFlow Expense { get; }
         static MoneyFlow()
         {
             Income = new MoneyFlow("Thu Nhập");

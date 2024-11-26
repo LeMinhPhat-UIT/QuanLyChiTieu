@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using QuanLyChiTieu.BusinessLogic.Services;
+using QuanLyChiTieu.BusinessLogic.SupportedClasses;
 //using QuanLyChiTieu.BusinessLogic.OtherClasses;
 
 namespace Finance
@@ -23,10 +24,15 @@ namespace Finance
     /// </summary>
     public partial class BudgetView : Window
     {
+        public ComboBox comboBox = new ComboBox();
         public BudgetView()
         {
             InitializeComponent();
-            BudgetService.CreateWallet("wallet1", "Tiền Mặt", "100", new DateTime(2005, 10, 19));
+            //comboBox.ItemsSource = WalletType._allWalletTypes.Values.ToList();
+            List<int> list = new List<int>() { 1,2,3,4,5};
+            //walletTypeList.ItemsSource= WalletType._allWalletTypes.Values.ToList(); 
+            walletTypeList.ItemsSource = list;
+            
         }
     }
 }

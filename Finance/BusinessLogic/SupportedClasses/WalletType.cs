@@ -10,14 +10,6 @@ namespace QuanLyChiTieu.BusinessLogic.SupportedClasses
 {
     public class WalletType
     {
-        public static WalletType Cash { get; }
-        public static WalletType DebitCard { get; }
-        public static WalletType CreditCard { get; }
-        public static WalletType VirtualAccount { get; }
-        public static WalletType Investment { get; }
-        public static WalletType Debt { get; }
-        public static WalletType MyDebt { get; }
-
         public static Dictionary<string, WalletType> _allWalletTypes { get; } = new Dictionary<string, WalletType>();
 
         public string Name { get; set; }
@@ -28,6 +20,13 @@ namespace QuanLyChiTieu.BusinessLogic.SupportedClasses
             _allWalletTypes[name] = this;
         }
 
+        public static WalletType Cash { get; }
+        public static WalletType DebitCard { get; }
+        public static WalletType CreditCard { get; }
+        public static WalletType VirtualAccount { get; }
+        public static WalletType Investment { get; }
+        public static WalletType Debt { get; }
+        public static WalletType MyDebt { get; }
         static WalletType()
         {
             Cash = new WalletType("Tiền Mặt");
