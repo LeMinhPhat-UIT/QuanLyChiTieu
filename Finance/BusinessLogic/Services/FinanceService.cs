@@ -17,6 +17,13 @@ namespace QuanLyChiTieu.BusinessLogic.Services
         public static void Alert()
             => Console.WriteLine("the amount is lower than the need");
 
+        public static int CreateTransaction(string transactionName, double money, string moneyFlow, string catalog, string walletID, DateTime date)
+        {
+            /*
+            Tạo giao dịch từ các thông tin được truyền vào
+            */
+        }
+        
         public static void AddTransaction(int transactionID, int walletID)
         {
             /*
