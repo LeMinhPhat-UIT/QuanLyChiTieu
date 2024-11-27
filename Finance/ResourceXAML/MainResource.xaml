@@ -1,8 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:viewmodel="clr-namespace:Finance.ViewModel"
-
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    
-    >
-    <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
-</ResourceDictionary>
