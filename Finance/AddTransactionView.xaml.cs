@@ -12,8 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Finance.ViewModel;
 using QuanLyChiTieu.BusinessLogic.Services;
-using QuanLyChiTieu.BusinessLogic.SupportedClasses;
 
 namespace Finance
 {
@@ -22,10 +22,10 @@ namespace Finance
     /// </summary>
     public partial class AddTransactionView : Window
     {
-        public Transaction transaction1, transaction2;
         public AddTransactionView()
         {
             InitializeComponent();
+            this.DataContext = new AddTransactionViewModel();
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using LiveCharts;
 using LiveCharts.Wpf;
-using QuanLyChiTieu.BusinessLogic.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

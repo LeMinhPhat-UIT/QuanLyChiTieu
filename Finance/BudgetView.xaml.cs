@@ -14,8 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using QuanLyChiTieu.BusinessLogic.Services;
-using QuanLyChiTieu.BusinessLogic.SupportedClasses;
-//using QuanLyChiTieu.BusinessLogic.OtherClasses;
 
 namespace Finance
 {
