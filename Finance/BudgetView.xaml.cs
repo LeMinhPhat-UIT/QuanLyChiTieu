@@ -13,7 +13,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using QuanLyChiTieu.BusinessLogic.Services;
 using DTO;
 
 namespace Finance
@@ -23,7 +22,6 @@ namespace Finance
     /// </summary>
     public partial class BudgetView : Window
     {
-        private BudgetService budgetService = new BudgetService();
 
         public BudgetView()
         {
