@@ -12,10 +12,10 @@ namespace DTO
 
         public int ID { get; set; }
         public string TransactionName { get; set; }
-        public double Money { get; set; }
+        public double TransactionMoney { get; set; }
         public string TransactionMoneyFlow { get; set; }
         public string TransactionCatalog { get; set; }
-        public string TransactionBudgetService { get; set; }
-        public DateTime TransactionDate { get; set; }
+        public string WalletID { get; set; }
+        public DateOnly TransactionDate { get; set; }
     }
 }

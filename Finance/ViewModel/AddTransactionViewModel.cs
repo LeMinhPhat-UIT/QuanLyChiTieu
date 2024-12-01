@@ -5,56 +5,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Documents;
 using System.Windows.Input;
 using BLL;
+using DAL;
 using DTO;
 
 namespace Finance.ViewModel
 {
     public class AddTransactionViewModel : BaseViewModel
     {
-        public ObservableCollection<string> TransactionCatalog { get; set; }
 
-        private ObservableCollection<string> _transactionMoneyFlow;
-        private List<string> _transactionBudgetService;
-        private string _selectedTransactionMoneyFlow;
-        private string _selectedTransactionCatalog;
-        private string _selectedTransactionBudgetService;
+        private List<Catalog> CatalogList;
         private string _transactionName;
         private decimal _transactionMoney;
+        private List<string> _catalogMoneyFlow;
+        private string _selectedCatalogMoneyFlow;
+        private List<string> _catalogName;
+        private string _selectedCatalogName;
+        private List<Wallet> _walletList;
+        private Wallet _selectedWallet;
         private DateTime _transactionDate;
-        private ObservableCollection<Transaction> _list;
-        private Transaction _selectedTransaction;
-
-        public ObservableCollection<string> TransactionMoneyFlow 
-        { 
-            get { return _transactionMoneyFlow; }
-            set { _transactionMoneyFlow = value; OnPropertyChanged(); }
-        }
-
-        public List<string> TransactionBudgetService
-        { 
-            get { return _transactionBudgetService; }
-            set { _transactionBudgetService = value; OnPropertyChanged(); }
-        }
-
-        public string SelectedTransactionMoneyFlow
-        {
-            get { return _selectedTransactionMoneyFlow; }
-            set { _selectedTransactionMoneyFlow = value; OnPropertyChanged(); }
-        }
-
-        public string SelectedTransactionCatalog
-        {
-            get { return _selectedTransactionCatalog; }
-            set { _selectedTransactionCatalog = value; OnPropertyChanged(); }
-        }
-
-        public string SelectedTransactionBudgetService
-        {
-            get { return _selectedTransactionBudgetService; }
-            set { _selectedTransactionBudgetService = value; OnPropertyChanged(); }
-        }
+        private List<Transaction> _transactionList;
+        private List<Transaction> _selectedTransactions;
 
         public string TransactionName
         {
@@ -68,59 +41,115 @@ namespace Finance.ViewModel
             set { _transactionMoney = value; OnPropertyChanged(); }
         }
 
+        public List<string> CatalogMoneyFlow
+        {
+            get { return _catalogMoneyFlow; }
+            set { _catalogMoneyFlow = value; OnPropertyChanged(); }
+        }
+
+        public string SelectedCatalogMoneyFlow
+        {
+            get { return _selectedCatalogMoneyFlow; }
+            set { _selectedCatalogMoneyFlow = value; OnPropertyChanged(); FilterCatalogName(); }
+        }
+
+        public List<string> CatalogName
+        {
+            get { return _catalogName; }
+            set { _catalogName = value; OnPropertyChanged(); }
+        }
+
+        public string SelectedCatalogName
+        {
+            get { return _selectedCatalogName; }
+            set { _selectedCatalogName = value; OnPropertyChanged(); FilterCatalogMoneyFlow(); }
+        }
+
+        public List<Wallet> WalletList
+        {
+            get { return _walletList; }
+            set { _walletList = value; OnPropertyChanged(); }
+        }
+
+        public Wallet SelectedWallet
+        {
+            get { return _selectedWallet; }
+            set { _selectedWallet = value; OnPropertyChanged(); }
+        }
+
         public DateTime TransactionDate
         {
             get { return _transactionDate; }
             set { _transactionDate = value; OnPropertyChanged(); }
         }
 
-        public Transaction SelectedTransaction
+        public List<Transaction> TransactionList
         {
-            get => _selectedTransaction;
-            set { _selectedTransaction = value; OnPropertyChanged(); }
+            get { return _transactionList; }
+            set { _transactionList = value; OnPropertyChanged(); }
         }
 
-        public ObservableCollection<Transaction> List
+        public List<Transaction> SelectedTransactions
         {
-            get => _list;
-            set { _list = value;OnPropertyChanged(); }
+            get { return _selectedTransactions; }
+            set { _selectedTransactions = value; OnPropertyChanged(); }
+        }
+
+        private void FilterCatalogName()
+        {
+            CatalogName.Clear();
+            var filtered = CatalogList.Where(x => x.CatalogMoneyFlow == SelectedCatalogMoneyFlow).Select(x => x.CatalogName).Distinct().ToList();
+            CatalogName = filtered;
+        }
+
+        private void FilterCatalogMoneyFlow()
+        {
+            if(SelectedCatalogName != null)
+            {
+                var catalogMoneyFlow = CatalogList?.FirstOrDefault(x=>x.CatalogName == SelectedCatalogName);
+                if(catalogMoneyFlow != null)
+                    if(SelectedCatalogMoneyFlow != catalogMoneyFlow.CatalogMoneyFlow)
+                        SelectedCatalogMoneyFlow = catalogMoneyFlow.CatalogMoneyFlow;
+            }
         }
 
         public ICommand AddCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
-        public ICommand UpdateCommand { get; set; }
+        public ICommand EditCommand { get; set; }
 
         public AddTransactionViewModel()
         {
-            var x = WalletBLL.LoadWallets();
+            TransactionDate = DateTime.Now.Date;
+            TransactionList = TransactionBLL.GetAllTransactions();
 
             AddCommand = new RelayCommand<object>((p) => true, (p) => AddTransaction());
             DeleteCommand = new RelayCommand<object>((p) => true, (p) => DeleteTransaction());
-            List = new ObservableCollection<Transaction>();
-            TransactionBudgetService = new List<string>();
-            TransactionBudgetService = x.Select(y=>y.WalletName).ToList();
-            Load();
+            EditCommand = new RelayCommand<object>(p => true, (p) => EditTransaction());
+
+            WalletList = WalletBLL.LoadWallets();
+            CatalogList = CatalogDAL.GetAllCatalog();
+            CatalogMoneyFlow = CatalogList.Select(x=>x.CatalogMoneyFlow).Distinct().ToList();
+            CatalogName = CatalogList.Select(x=>x.CatalogName).Distinct().ToList();
         }
 
         private void AddTransaction()
         {
-            var newTransacID = TransactionBLL.CreateTransaction(TransactionName, (double)TransactionMoney, SelectedTransactionMoneyFlow, SelectedTransactionCatalog, SelectedTransactionBudgetService, TransactionDate);
-            TransactionBLL.AddTransaction(newTransacID, 1);
-            Load();
+            var newTransacID = TransactionBLL.CreateTransaction(TransactionName, (double)TransactionMoney, SelectedCatalogMoneyFlow, SelectedCatalogName, SelectedWallet.ID.ToString(), TransactionDate);
+            TransactionBLL.AddTransaction(newTransacID, SelectedWallet.ID);
+            TransactionList = TransactionBLL.GetAllTransactions();
         }
 
         private void DeleteTransaction()
         {
-            
-            Load();
+            TransactionBLL.DeleteTransaction(SelectedTransactions.Select(x=>x.ID).ToList());
+            TransactionList = TransactionBLL.GetAllTransactions();
         }
 
-        private void Load()
+        private void EditTransaction()
         {
-            List.Clear();
-            var list = TransactionBLL.Load();
-            foreach (var item in list)
-                List.Add(item);
+            if(SelectedTransactions.Count == 1)
+                TransactionBLL.UpdateTransaction(SelectedTransactions[0].ID, TransactionName, (double)TransactionMoney, SelectedCatalogMoneyFlow, SelectedCatalogName, SelectedTransactions[0].WalletID, TransactionDate);
+            TransactionList = TransactionBLL.GetAllTransactions();
         }
     }
 }

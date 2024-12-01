@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using QuanLyChiTieu.BusinessLogic.Services;
+using DTO;
 
 namespace Finance
 {
@@ -27,6 +28,14 @@ namespace Finance
         public BudgetView()
         {
             InitializeComponent();
+            DataContext = new BudgetViewModel();
+        }
+
+        private void WalletSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var listView = sender as ListView;
+            if (DataContext is BudgetViewModel budgetViewModel)
+                budgetViewModel.SelectedWallets = listView.SelectedItems.Cast<Wallet>().ToList();
         }
     }
 }

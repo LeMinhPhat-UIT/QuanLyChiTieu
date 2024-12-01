@@ -149,9 +149,9 @@
                     <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Tên giao dịch" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
-                                <GridViewColumn Header="Số tiền" DisplayMemberBinding="{Binding Money}"></GridViewColumn>
-                                <GridViewColumn Header="Loại giao dịch" DisplayMemberBinding="{Binding TransactionType}"></GridViewColumn>
+                                <GridViewColumn Header="Tên giao dịch" DisplayMemberBinding="{Binding TransactionName}"></GridViewColumn>
+                                <GridViewColumn Header="Số tiền" DisplayMemberBinding="{Binding TransactionMoney}"></GridViewColumn>
+                                <GridViewColumn Header="Loại giao dịch" DisplayMemberBinding="{Binding TransactionCatalog}"></GridViewColumn>
                                 <!--<GridViewColumn Header="Ngày giao dịch" DisplayMemberBinding="{Binding TransactionDate}"></GridViewColumn>-->
                             </GridView>
                         </ListView.View>

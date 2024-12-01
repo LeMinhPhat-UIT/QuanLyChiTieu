@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Finance.ViewModel;
 using QuanLyChiTieu.BusinessLogic.Services;
+using DTO;
 
 namespace Finance
 {
@@ -26,6 +27,12 @@ namespace Finance
         {
             InitializeComponent();
             this.DataContext = new AddTransactionViewModel();
+        }
+        private void TransactionSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var listView = sender as ListView;
+            if (DataContext is AddTransactionViewModel addTransactionViewModel)
+                addTransactionViewModel.SelectedTransactions = listView.SelectedItems.Cast<Transaction>().ToList();
         }
     }
 }

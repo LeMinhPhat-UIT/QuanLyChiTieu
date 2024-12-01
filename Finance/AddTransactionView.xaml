@@ -48,7 +48,8 @@
                     <ComboBox materialDesign:HintAssist.Hint="Dòng tiền" Margin="5 5 15 -3"
                               materialDesign:HintAssist.HintOpacity=".26"
                               IsEditable="False"
-                              ItemsSource="{Binding TransactionMoneyFlow, Mode=TwoWay}">
+                              ItemsSource="{Binding CatalogMoneyFlow, Mode=TwoWay}"
+                              SelectedItem="{Binding SelectedCatalogMoneyFlow}">
                         <!--Data mẫu
                         <ComboBoxItem> Chi tiêu </ComboBoxItem>
                         <ComboBoxItem> Thu nhập </ComboBoxItem>
@@ -58,7 +59,8 @@
                     <ComboBox materialDesign:HintAssist.Hint="Danh mục" Margin="5 5 15 -3"
                               materialDesign:HintAssist.HintOpacity=".26"
                               IsEditable="False"
-                              ItemsSource="{Binding TransactionCatalog, Mode=TwoWay}">
+                              ItemsSource="{Binding CatalogName, Mode=TwoWay}"
+                              SelectedItem="{Binding SelectedCatalogName}">
                         <!--Data mẫu
                         tự thêm...
                         -->
@@ -67,7 +69,9 @@
                     <ComboBox materialDesign:HintAssist.Hint="Ví tiền" Margin="5 5 15 -3"
                               materialDesign:HintAssist.HintOpacity=".26"
                               IsEditable="False"
-                              ItemsSource="{Binding TransactionBudgetService, Mode=TwoWay}">
+                              DisplayMemberPath="WalletName"
+                              ItemsSource="{Binding WalletList, Mode=TwoWay}"
+                              SelectedItem="{Binding SelectedWallet}">
                         <!--Data mẫu
                         <ComboBoxItem> Tiền Mặt </ComboBoxItem>
                         <ComboBoxItem> Thẻ Tín Dụng </ComboBoxItem>
@@ -88,14 +92,14 @@
 
             <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
+                    <ListView ItemsSource="{Binding TransactionList}" SelectedItem="{Binding SelectedTransactions, Mode=OneWayToSource}" SelectionMode="Multiple" SelectionChanged="TransactionSelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Tên giao dịch" DisplayMemberBinding="{Binding TransactionName}"></GridViewColumn>
                                 <GridViewColumn Header="Số tiền" DisplayMemberBinding="{Binding TransactionMoney}"></GridViewColumn>
                                 <GridViewColumn Header="Dòng tiền" DisplayMemberBinding="{Binding TransactionMoneyFlow}"></GridViewColumn>
                                 <GridViewColumn Header="Danh mục" DisplayMemberBinding="{Binding TransactionCatalog}"></GridViewColumn>
-                                <GridViewColumn Header="Ví tiền" DisplayMemberBinding="{Binding TransactionBudgetService}"></GridViewColumn>
+                                <GridViewColumn Header="Ví tiền" DisplayMemberBinding="{Binding WalletID}"></GridViewColumn>
                                 <GridViewColumn Header="Ngày giao dịch" DisplayMemberBinding="{Binding TransactionDate}"></GridViewColumn>
                             </GridView>
                         </ListView.View>

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Finance.ViewModel;
 
 namespace Finance
 {
@@ -42,7 +43,7 @@ namespace Finance
             //YFormatter = value => value.ToString("N0");
 
             InitializeComponent();
-            //DataContext = this;
+            DataContext = new MainViewModel();
         }
     }
 }

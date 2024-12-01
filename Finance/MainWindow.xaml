@@ -152,18 +152,19 @@
                             </Grid.ColumnDefinitions>
 
                             <Grid Grid.Column="0">
-                                <DatePicker VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" materialDesign:HintAssist.Hint="Ngày bắt đầu" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                                <DatePicker VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" materialDesign:HintAssist.Hint="Ngày bắt đầu" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" SelectedDate="{Binding StartDate}"/>
                             </Grid>
 
                             <Grid Grid.Column="1">
-                                <DatePicker VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" materialDesign:HintAssist.Hint="Ngày kết thúc" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                                <DatePicker VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" materialDesign:HintAssist.Hint="Ngày kết thúc" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" SelectedDate="{Binding EndDate}"/>
                             </Grid>
 
                             <Grid Grid.Column="2">
                                 <Button Style="{StaticResource MaterialDesignRaisedButton}" Margin="5"
                                         Width="100" 
                                         Content="Lọc"
-                                        ToolTip="Resource name: MaterialDesignRaisedButton">
+                                        ToolTip="Resource name: MaterialDesignRaisedButton"
+                                        Command="{Binding Filter}">
                                 </Button>
                             </Grid>
                         </Grid>
