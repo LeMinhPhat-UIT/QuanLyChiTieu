@@ -9,11 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using DTO;
 
 namespace Finance.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
+        private List<Transaction> _list;
+
         public bool IsLoaded = false;
         public ICommand AddTransactionViewCommand { get; set; }
         public ICommand BudgetViewCommand { get; set; }
@@ -25,11 +28,21 @@ namespace Finance.ViewModel
         public SeriesCollection SeriesCollection { get; set; }
         public List<DateOnly> Labels { get; set; }
         public Func<double, string> YFormatter { get; set; }
+        public string TransactionMoney { get; set; }
+        public string TransactionName { get; set; }
+        public DateTime TransactionDate { get; set; }
+        public List<Transaction> List 
+        {
+            get { return _list; }
+            set { _list = value; OnPropertyChanged(); }
+        }
+
         public MainViewModel()
         {
             StartDate = DateTime.Now.Date;
             EndDate = DateTime.Now.Date;
 
+            List = TransactionBLL.GetAllTransactions();
             List<DateOnly> Labels = TransactionBLL.GetAllTransactions()
                                                    .Select(x => x.TransactionDate)
                                                    .Distinct().OrderBy(date=>date)
@@ -96,6 +109,14 @@ namespace Finance.ViewModel
                 Title = "Chi tiêu",
                 Values = new ChartValues<double>(ExpenseData)
             });
+            var x=StartDate;
+            var y=EndDate;
+            List = TransactionBLL.GetAllTransactions()
+                                 .Where(x =>
+                                    x.TransactionDate >= DateOnly.FromDateTime(StartDate)
+                                    &&
+                                    x.TransactionDate <= DateOnly.FromDateTime(EndDate))
+                                 .ToList();
         }
     }
 }

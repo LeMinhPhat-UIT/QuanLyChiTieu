@@ -174,13 +174,13 @@
                         </Grid>
 
                         <Grid Grid.Row="2">
-                            <ListView>
+                            <ListView ItemsSource="{Binding List}">
                                 <ListView.View>
                                     <GridView>
                                         <GridViewColumn Header="STT"></GridViewColumn>
-                                        <GridViewColumn Header="Tên giao dịch"></GridViewColumn>
-                                        <GridViewColumn Header="Giá"></GridViewColumn>
-                                        <GridViewColumn Header="Ngày"></GridViewColumn>
+                                        <GridViewColumn Header="Tên giao dịch" DisplayMemberBinding="{Binding TransactionName}"></GridViewColumn>
+                                        <GridViewColumn Header="Số tiền" DisplayMemberBinding="{Binding TransactionMoney}"></GridViewColumn>
+                                        <GridViewColumn Header="Ngày" DisplayMemberBinding="{Binding TransactionDate}"></GridViewColumn>
                                     </GridView>
                                 </ListView.View>
                             </ListView>
