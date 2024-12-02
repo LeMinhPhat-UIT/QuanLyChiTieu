@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Project\\QuanLyChiTieu\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|d:\\project\\quanlychitieu\\finance\\reportsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\reportsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|d:\\project\\quanlychitieu\\finance\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,11 +30,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "ReportsView.xaml",
+              "DocumentMoniker": "D:\\Project\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeDocumentMoniker": "Finance\\ReportsView.xaml",
+              "ToolTip": "D:\\Project\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeToolTip": "Finance\\ReportsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T15:48:34.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AddTransactionViewModel.cs",
               "DocumentMoniker": "D:\\Project\\QuanLyChiTieu\\Finance\\ViewModel\\AddTransactionViewModel.cs",
               "RelativeDocumentMoniker": "Finance\\ViewModel\\AddTransactionViewModel.cs",
@@ -38,24 +54,22 @@
               "RelativeToolTip": "Finance\\ViewModel\\AddTransactionViewModel.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T15:23:59.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T15:23:59.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AddTransactionView.xaml",
               "DocumentMoniker": "D:\\Project\\QuanLyChiTieu\\Finance\\AddTransactionView.xaml",
               "RelativeDocumentMoniker": "Finance\\AddTransactionView.xaml",
               "ToolTip": "D:\\Project\\QuanLyChiTieu\\Finance\\AddTransactionView.xaml",
               "RelativeToolTip": "Finance\\AddTransactionView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-02T15:14:17.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T15:14:17.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "D:\\Project\\QuanLyChiTieu\\Finance\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "Finance\\ViewModel\\MainViewModel.cs",
@@ -68,15 +82,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Project\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
               "ToolTip": "D:\\Project\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeToolTip": "Finance\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-02T15:13:39.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T15:13:39.786Z"
             }
           ]
         }
