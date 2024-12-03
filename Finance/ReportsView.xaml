@@ -125,7 +125,7 @@
 
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="130"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Tổng thu nhập/Ngày: " Grid.Column="0" Margin="5 5 5 15" Foreground="Gray"></TextBlock>
@@ -135,7 +135,7 @@
 
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="124.58"></ColumnDefinition>
+                            <ColumnDefinition Width="130"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Tổng chi tiêu/Ngày: " Grid.Column="0" Margin="5 5 5 15" Foreground="Gray"></TextBlock>
