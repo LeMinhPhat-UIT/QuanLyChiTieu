@@ -1936,11 +1936,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\Finance.csproj",
+      "projectUniqueName": "E:\\UIT\\QuanLyChiTieu\\Finance\\Finance.csproj",
       "projectName": "Finance",
-      "projectPath": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\Finance.csproj",
+      "projectPath": "E:\\UIT\\QuanLyChiTieu\\Finance\\Finance.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\obj\\",
+      "outputPath": "E:\\UIT\\QuanLyChiTieu\\Finance\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

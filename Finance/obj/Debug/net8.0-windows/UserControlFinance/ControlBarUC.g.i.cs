@@ -65,7 +65,7 @@ namespace Finance.UserControlFinance {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Finance;component/usercontrolfinance/controlbaruc.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Finance;V1.0.0.0;component/usercontrolfinance/controlbaruc.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControlFinance\ControlBarUC.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
