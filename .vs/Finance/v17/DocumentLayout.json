@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\UIT\\QuanLyChiTieu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -15,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\addtransactionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\addtransactionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\reportsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\reportsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\addtransactionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\addtransactionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/AAAAA/IT008_Project/True/SqlTable/dbo.Transaction.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -52,7 +52,7 @@
       "VerticalTabListWidth": 258,
       "DocumentGroups": [
         {
-          "DockedWidth": 265,
+          "DockedWidth": 312,
           "SelectedChildIndex": 4,
           "Children": [
             {
@@ -73,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
@@ -85,18 +85,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ReportsView.xaml",
               "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
               "RelativeDocumentMoniker": "Finance\\ReportsView.xaml",
               "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
               "RelativeToolTip": "Finance\\ReportsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-04T19:08:39Z"
+              "WhenOpened": "2024-12-04T19:08:39Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AddTransactionView.xaml",
               "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\AddTransactionView.xaml",
               "RelativeDocumentMoniker": "Finance\\AddTransactionView.xaml",
@@ -177,30 +178,31 @@
           ]
         },
         {
-          "DockedWidth": 371,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 324,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.xaml",
-              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\App.xaml",
-              "RelativeDocumentMoniker": "Finance\\App.xaml",
-              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\App.xaml",
-              "RelativeToolTip": "Finance\\App.xaml",
+              "DocumentIndex": 2,
+              "Title": "ReportsView.xaml",
+              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeDocumentMoniker": "Finance\\ReportsView.xaml",
+              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeToolTip": "Finance\\ReportsView.xaml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAHUAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-04T19:08:39.016Z",
+              "WhenOpened": "2024-12-04T19:16:28.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
               "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeToolTip": "Finance\\MainWindow.xaml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAIwCAAAAAZAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAIwEIAAABzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-04T19:08:39.021Z",
               "EditorCaption": ""

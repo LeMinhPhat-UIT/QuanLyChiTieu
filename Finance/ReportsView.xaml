@@ -70,7 +70,7 @@
                 </Grid>
             </materialDesign:Card>-->
             <!--Element binding từ selected item-->
-            <materialDesign:Card Grid.Row="1" Margin="5">
+            <materialDesign:Card Grid.Row="1" Margin="5" Background="LightCyan">
                 <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left">
                     <lvc:CartesianChart.AxisX>
                         <lvc:Axis Title="Loại chi tiêu" Labels="{Binding Labels}"></lvc:Axis>
@@ -91,7 +91,7 @@
                 </TextBlock>
             </materialDesign:Card>
 
-            <materialDesign:Card Grid.Row="3" Margin="5">
+            <materialDesign:Card Grid.Row="3" Margin="5" Background="LightCyan">
                 <lvc:CartesianChart Series="{Binding SeriesCollection2}" LegendLocation="Left">
                     <lvc:CartesianChart.AxisX>
                         <lvc:Axis Title="Loại thu nhập" Labels="{Binding Labels2}"></lvc:Axis>
@@ -115,7 +115,7 @@
             </materialDesign:Card>
 
 
-            <materialDesign:Card Grid.Row="5" Margin="5" VerticalAlignment="Stretch">
+            <materialDesign:Card Grid.Row="5" Margin="5" VerticalAlignment="Stretch" Background="LightCyan">
                 <Grid Grid.Row="0" Margin="5">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>

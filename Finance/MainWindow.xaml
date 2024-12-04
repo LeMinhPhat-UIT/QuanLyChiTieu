@@ -50,7 +50,7 @@
 
             <!--Menu-->
             <Grid Grid.Row="0">
-                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" >
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="LightPink" >
                     <Grid.Resources>
                         <Style TargetType="Button">
                             <Setter Property="Margin" Value="2 4 2 4"></Setter>
@@ -64,7 +64,7 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Column="0" Command="{Binding AddTransactionViewCommand}" ToolTip="Thêm giao dịch">
+                    <Button Grid.Column="1" Command="{Binding AddTransactionViewCommand}" ToolTip="Thêm giao dịch" >
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -81,7 +81,7 @@
                         </Grid>
                     </Button>
 
-                    <Button Grid.Column="1" Command="{Binding BudgetViewCommand}" ToolTip="Số dư">
+                    <Button Grid.Column="0" Command="{Binding BudgetViewCommand}" ToolTip="Số dư">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>

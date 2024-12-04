@@ -82,7 +82,7 @@ namespace Finance {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Finance;V1.0.0.0;component/budgetview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Finance;component/budgetview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\BudgetView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
