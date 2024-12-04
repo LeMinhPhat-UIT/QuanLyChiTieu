@@ -10,7 +10,7 @@ namespace DAL
 {
     public static class TransactionDAL
     {
-        private static readonly string connectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=IT008_Project;Integrated Security=True;Trust Server Certificate=True";
+        private static readonly string connectionString = "Data Source=AAAAA;Initial Catalog=IT008_Project;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
         public static int CreateTransaction(string transactionName, decimal money, string moneyFlow, string catalog, string walletID, DateTime date)
         {

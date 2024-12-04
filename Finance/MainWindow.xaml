@@ -16,11 +16,12 @@
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
+        Background="LightCyan"
         FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="None"
+        
         
         Name ="mainWindow"
         DataContext="{StaticResource MainVM}"
@@ -125,7 +126,8 @@
 
                 <!--Filter-->
                 <Grid Grid.Row="0">
-                    <lvc:CartesianChart  Series="{Binding SeriesCollection}" LegendLocation="Right" >
+                    <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" Foreground="Black">
+                        
                         <lvc:CartesianChart.AxisY>
                             <lvc:Axis Title="VND" LabelFormatter="{Binding YFormatter}" MinValue="0"></lvc:Axis>
                         </lvc:CartesianChart.AxisY>

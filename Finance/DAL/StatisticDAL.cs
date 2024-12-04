@@ -10,7 +10,7 @@ namespace DAL
 {
     public class StatisticDAL
     {
-        private static readonly string _connectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=IT008_Project;Integrated Security=True;Trust Server Certificate=True";
+        private static readonly string _connectionString = "Data Source=AAAAA;Initial Catalog=IT008_Project;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         
         public static List<DateOnly> GetDateHasData(DateTime startDate, DateTime endDate)
         {

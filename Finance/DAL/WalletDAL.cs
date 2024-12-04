@@ -11,7 +11,7 @@ namespace DAL
     public class WalletDAL
     {
         private List<Wallet> _wallets = new List<Wallet>();
-        private static readonly string _connectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=IT008_Project;Integrated Security=True;Trust Server Certificate=True";
+        private static readonly string _connectionString = "Data Source=AAAAA;Initial Catalog=IT008_Project;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         public static void AddWallet(Wallet wallet)
         {
             string query = @"

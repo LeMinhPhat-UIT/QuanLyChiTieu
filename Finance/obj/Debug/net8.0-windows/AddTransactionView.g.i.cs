@@ -66,7 +66,7 @@ namespace Finance {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Finance;V1.0.0.0;component/addtransactionview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Finance;component/addtransactionview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddTransactionView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -12,7 +12,7 @@ namespace DAL
 {
     public class CatalogDAL
     {
-        private static readonly string connectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=IT008_Project;Integrated Security=True;Trust Server Certificate=True";
+        private static readonly string connectionString = "Data Source=AAAAA;Initial Catalog=IT008_Project;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
         public static List<Catalog> GetAllCatalog()
         {

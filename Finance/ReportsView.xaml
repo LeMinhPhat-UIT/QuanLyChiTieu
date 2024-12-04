@@ -21,7 +21,6 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         x:Name="window"
-
         
         Title="Thống kê" Height="800" Width="700">
     <Grid>
