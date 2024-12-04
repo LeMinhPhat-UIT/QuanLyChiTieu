@@ -213,5 +213,24 @@ namespace DAL
             }
             return transastions;
         }
+        public static string GetWalletNameByID(string WalletID)
+        {
+            string walletName = null;
+            string query = @" SELECT WalletName
+                            FROM [Wallet]
+                            WHERE ID = @WalletID";
+            using(SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@WalletID", WalletID);
+                conn.Open();
+                object res = command.ExecuteScalar();
+                if(res != null && res != DBNull.Value)
+                {
+                    walletName = res.ToString();
+                }
+            }
+            return walletName;
+        }
     }
 }
