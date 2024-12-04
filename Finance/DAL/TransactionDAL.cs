@@ -207,6 +207,7 @@ namespace DAL
                         WalletID = reader.IsDBNull(5) ? null : reader.GetString(5),
                         TransactionDate = DateOnly.FromDateTime(reader.GetDateTime(6))
                     };
+                    transaction.WalletName = GetWalletNameByID(transaction.WalletID);
                     transastions.Add(transaction);
                 }
                 reader.Close();

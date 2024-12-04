@@ -16,7 +16,7 @@ namespace DTO
         public string TransactionMoneyFlow { get; set; }
         public string TransactionCatalog { get; set; }
         public string WalletID { get; set; }
-        public string WalletName { get; set; } //
+        public string WalletName { get; set; }
         public DateOnly TransactionDate { get; set; }
     }
 }

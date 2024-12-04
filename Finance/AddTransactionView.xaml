@@ -99,7 +99,7 @@
                                 <GridViewColumn Header="Số tiền" DisplayMemberBinding="{Binding TransactionMoney}"></GridViewColumn>
                                 <GridViewColumn Header="Dòng tiền" DisplayMemberBinding="{Binding TransactionMoneyFlow}"></GridViewColumn>
                                 <GridViewColumn Header="Danh mục" DisplayMemberBinding="{Binding TransactionCatalog}"></GridViewColumn>
-                                <GridViewColumn Header="Ví tiền" DisplayMemberBinding="{Binding WalletID}"></GridViewColumn>
+                                <GridViewColumn Header="Ví tiền" DisplayMemberBinding="{Binding WalletName}"></GridViewColumn>
                                 <GridViewColumn Header="Ngày giao dịch" DisplayMemberBinding="{Binding TransactionDate}"></GridViewColumn>
                             </GridView>
                         </ListView.View>
