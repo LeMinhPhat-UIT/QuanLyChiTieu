@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Finance.ViewModel
@@ -84,6 +85,16 @@ namespace Finance.ViewModel
 
         private void AddWallet()
         {
+            if(WalletName == null || SelectedWalletType == null || Money == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng nhập đầy đủ thông tin",
+                    "Warning",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning
+                );
+                return;
+            }
             WalletBLL.AddWallet(WalletName, SelectedWalletType.ToString(), Money.ToString(), UpdateDate);
             WalletList = WalletBLL.LoadWallets();
         }

@@ -78,7 +78,7 @@ namespace Finance.ViewModel
            );
 
             ReportsViewCommand = new RelayCommand<object>((p) => { return true; }, (p) => {
-                ReportsView Window = new ReportsView(StartDate, EndDate);
+                ReportsView Window = new ReportsView();
                 Window.ShowDialog();
             }
            );
@@ -96,6 +96,7 @@ namespace Finance.ViewModel
         {
             SeriesCollection.Clear();
             Labels = StatisticBLL.GetDateHasData(StartDate, EndDate);
+
             List<double> IncomeData = StatisticBLL.GetDataByDate("Thu nhập", StartDate, EndDate).Select(x => x.Item2).ToList();
             List<double> ExpenseData = StatisticBLL.GetDataByDate("Chi tiêu", StartDate, EndDate).Select(x => x.Item2).ToList();
 
@@ -109,8 +110,6 @@ namespace Finance.ViewModel
                 Title = "Chi tiêu",
                 Values = new ChartValues<double>(ExpenseData)
             });
-            var x=StartDate;
-            var y=EndDate;
             List = TransactionBLL.GetAllTransactions()
                                  .Where(x =>
                                     x.TransactionDate >= DateOnly.FromDateTime(StartDate)

@@ -22,13 +22,13 @@ namespace Finance.ViewModel
         public Func<double, string> Formatter { get; set; }
         public Func<double, string> Formatter2 { get; set; }
 
-        public ReportsViewModel(DateTime startDate, DateTime endDate)
+        public ReportsViewModel()
         {
-            Labels = StatisticBLL.GetDataByCatalog("Thu nhập", startDate, endDate).Select(x=>x.Item1).ToList();
-            Labels2 = StatisticBLL.GetDataByCatalog("Chi tiêu", startDate, endDate).Select(x => x.Item1).ToList();
+            Labels = StatisticBLL.GetDataByCatalog("Thu nhập", DateTime.Now.Date, DateTime.Now.Date).Select(x=>x.Item1).ToList();
+            Labels2 = StatisticBLL.GetDataByCatalog("Chi tiêu", DateTime.Now.Date, DateTime.Now.Date).Select(x => x.Item1).ToList();
 
-            List<double> IncomeData = StatisticBLL.GetDataByCatalog("Thu nhập", startDate, endDate).Select(x => x.Item2).ToList();
-            List<double> ExpenseData = StatisticBLL.GetDataByCatalog("Chi tiêu", startDate, endDate).Select(x => x.Item2).ToList();
+            List<double> IncomeData = StatisticBLL.GetDataByCatalog("Thu nhập", DateTime.Now.Date, DateTime.Now.Date).Select(x => x.Item2).ToList();
+            List<double> ExpenseData = StatisticBLL.GetDataByCatalog("Chi tiêu", DateTime.Now.Date, DateTime.Now.Date).Select(x => x.Item2).ToList();
             SeriesCollection = new SeriesCollection
             {
                 new ColumnSeries
@@ -51,12 +51,11 @@ namespace Finance.ViewModel
             Formatter = value => $"{value:#,##0.##} ₫";
             Formatter2 = value => $"{value:#,##0.##} ₫";
 
-            Income = IncomeData.Sum().ToString() + (endDate - startDate).ToString();
-            Spend = ExpenseData.Sum().ToString() + (endDate - startDate).ToString();
+            Income = IncomeData.Sum().ToString();
+            Spend = ExpenseData.Sum().ToString();
 
             List = TransactionBLL.GetAllTransactions()
-                                 .Where(x=>(x.TransactionDate>=DateOnly.FromDateTime(startDate) && 
-                                            x.TransactionDate <= DateOnly.FromDateTime(endDate)))
+                                 .Where(x=>x.TransactionDate==DateOnly.FromDateTime(DateTime.Now.Date))
                                  .ToList();
         }
     }

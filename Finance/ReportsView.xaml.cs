@@ -26,10 +26,10 @@ namespace Finance
         //public SeriesCollection SeriesCollection { get; set; }
         //public string[] Labels { get; set; }
         //public Func<double, string> Formatter { get; set; }
-        public ReportsView(DateTime startDate,DateTime endDate)
+        public ReportsView()
         {
             InitializeComponent();
-            DataContext = new ReportsViewModel(startDate, endDate);
+            DataContext = new ReportsViewModel();
         }
     }
 }

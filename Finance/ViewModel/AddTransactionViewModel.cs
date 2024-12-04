@@ -126,6 +126,15 @@ namespace Finance.ViewModel
             DeleteCommand = new RelayCommand<object>((p) => true, (p) => DeleteTransaction());
             EditCommand = new RelayCommand<object>(p => true, (p) => EditTransaction());
 
+            if (WalletBLL.LoadWallets() == null)
+            {
+                MessageBox.Show(
+                    "Bạn chưa có bất kỳ ví tiền nào để thực hiện giao dịch cả. Hãy tạo ví tiền rồi quay lại",
+                    "Warning",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning
+                );
+            }
             WalletList = WalletBLL.LoadWallets();
             CatalogList = CatalogDAL.GetAllCatalog();
             CatalogMoneyFlow = CatalogList.Select(x=>x.CatalogMoneyFlow).Distinct().ToList();
@@ -134,8 +143,20 @@ namespace Finance.ViewModel
 
         private void AddTransaction()
         {
+            if (TransactionName == null || TransactionMoney == 0 || SelectedCatalogMoneyFlow == null ||
+                SelectedCatalogName == null || SelectedWallet == null)
+            {
+                MessageBox.Show(
+                    "Vui lòng nhập đầy đủ thông tin",
+                    "Warning",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning
+                );
+                return;
+            }
             var newTransacID = TransactionBLL.CreateTransaction(TransactionName, (double)TransactionMoney, SelectedCatalogMoneyFlow, SelectedCatalogName, SelectedWallet.ID.ToString(), TransactionDate);
             TransactionBLL.AddTransaction(newTransacID, SelectedWallet.ID);
+            TransactionName = null; TransactionMoney = 0; SelectedCatalogMoneyFlow = null; SelectedCatalogName = null; SelectedWallet = null;
             TransactionList = TransactionBLL.GetAllTransactions();
         }
 
