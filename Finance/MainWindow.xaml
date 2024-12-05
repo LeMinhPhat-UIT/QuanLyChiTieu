@@ -23,9 +23,14 @@
         WindowStyle="None"
         
         
+        
         Name ="mainWindow"
         DataContext="{StaticResource MainVM}"
         Title="Phần mềm quản lý chi tiêu" Height="700" Width="625">
+    <Window.Resources>
+        <local:IndexConverter x:Key="IndexConverter" />
+    </Window.Resources>
+
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -182,7 +187,7 @@
                                         <GridViewColumn Header="STT">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem}, Path=(ItemsControl.AlternationIndex), StringFormat={}{0:0}}" />
+                                                    <TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem}, Path=(ItemsControl.AlternationIndex), StringFormat={}{0:0}, Converter={StaticResource IndexConverter}}" />
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
