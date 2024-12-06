@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\dal\\transactiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\dal\\transactiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\viewmodel\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\viewmodel\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\viewmodel\\addtransactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\viewmodel\\addtransactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\bll\\transactionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\bll\\transactionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\usercontrolfinance\\controlbaruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\usercontrolfinance\\controlbaruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\indexconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\dal\\walletdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\dal\\walletdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\dal\\transactiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\dal\\transactiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|f:\\uit-k18\\nam2\\lttq\\financemanagement\\quanlychitieu\\finance\\dal\\statisticdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,45 +70,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StatisticDAL.cs",
-              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\StatisticDAL.cs",
-              "RelativeDocumentMoniker": "Finance\\DAL\\StatisticDAL.cs",
-              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\StatisticDAL.cs",
-              "RelativeToolTip": "Finance\\DAL\\StatisticDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAC7AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BudgetViewModel.cs",
+              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\ViewModel\\BudgetViewModel.cs",
+              "RelativeDocumentMoniker": "Finance\\ViewModel\\BudgetViewModel.cs",
+              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\ViewModel\\BudgetViewModel.cs",
+              "RelativeToolTip": "Finance\\ViewModel\\BudgetViewModel.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAUwGkAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:35:23.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CatalogDAL.cs",
-              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\CatalogDAL.cs",
-              "RelativeDocumentMoniker": "Finance\\DAL\\CatalogDAL.cs",
-              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\CatalogDAL.cs",
-              "RelativeToolTip": "Finance\\DAL\\CatalogDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAC6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:34:35.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
-              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
-              "RelativeToolTip": "Finance\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-05T01:33:50.074Z",
+              "WhenOpened": "2024-12-06T02:23:07.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "TransactionBLL.cs",
+              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\BLL\\TransactionBLL.cs",
+              "RelativeDocumentMoniker": "Finance\\BLL\\TransactionBLL.cs",
+              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\BLL\\TransactionBLL.cs",
+              "RelativeToolTip": "Finance\\BLL\\TransactionBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T02:14:55.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddTransactionViewModel.cs",
+              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\ViewModel\\AddTransactionViewModel.cs",
+              "RelativeDocumentMoniker": "Finance\\ViewModel\\AddTransactionViewModel.cs",
+              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\ViewModel\\AddTransactionViewModel.cs",
+              "RelativeToolTip": "Finance\\ViewModel\\AddTransactionViewModel.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAYwKcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T02:09:30.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "TransactionDAL.cs",
               "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\TransactionDAL.cs",
               "RelativeDocumentMoniker": "Finance\\DAL\\TransactionDAL.cs",
@@ -105,7 +122,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "ControlBarUC.xaml",
+              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "RelativeDocumentMoniker": "Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "RelativeToolTip": "Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T13:50:14.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StatisticDAL.cs",
+              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\StatisticDAL.cs",
+              "RelativeDocumentMoniker": "Finance\\DAL\\StatisticDAL.cs",
+              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\StatisticDAL.cs",
+              "RelativeToolTip": "Finance\\DAL\\StatisticDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAC7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T01:35:23.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CatalogDAL.cs",
+              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\CatalogDAL.cs",
+              "RelativeDocumentMoniker": "Finance\\DAL\\CatalogDAL.cs",
+              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\CatalogDAL.cs",
+              "RelativeToolTip": "Finance\\DAL\\CatalogDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAC6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T01:34:35.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
+              "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "RelativeToolTip": "Finance\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T01:33:50.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "WalletDAL.cs",
               "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\DAL\\WalletDAL.cs",
               "RelativeDocumentMoniker": "Finance\\DAL\\WalletDAL.cs",
@@ -113,12 +178,11 @@
               "RelativeToolTip": "Finance\\DAL\\WalletDAL.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:35:32.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T01:35:32.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "IndexConverter.cs",
               "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\IndexConverter.cs",
               "RelativeDocumentMoniker": "Finance\\IndexConverter.cs",
@@ -126,21 +190,19 @@
               "RelativeToolTip": "Finance\\IndexConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:36:41.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T01:36:41.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Finance",
+              "DocumentIndex": 10,
+              "Title": "Finance.csproj",
               "DocumentMoniker": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\Finance.csproj",
               "RelativeDocumentMoniker": "Finance\\Finance.csproj",
               "ToolTip": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\Finance.csproj",
               "RelativeToolTip": "Finance\\Finance.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-05T01:33:46.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T01:33:46.723Z"
             }
           ]
         }
