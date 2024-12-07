@@ -1,30 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\UIT\\QuanLyChiTieu\\",
+  "WorkspaceRootPath": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\addtransactionview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\addtransactionview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\budgetview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\budgetview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\usercontrolfinance\\controlbaruc.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\usercontrolfinance\\controlbaruc.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\quanlychitieu\\finance\\usercontrolfinance\\controlbaruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\usercontrolfinance\\controlbaruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\usercontrolfinance\\controlbaruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\addtransactionview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\addtransactionview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\budgetview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\budgetview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -60,11 +64,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
-              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeToolTip": "Finance\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-07T19:11:25.941Z",
@@ -72,11 +76,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ControlBarUC.xaml",
-              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
               "RelativeDocumentMoniker": "Finance\\UserControlFinance\\ControlBarUC.xaml",
-              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
               "RelativeToolTip": "Finance\\UserControlFinance\\ControlBarUC.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-07T19:00:58.878Z",
@@ -86,59 +90,69 @@
         },
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ControlBarUC.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "RelativeDocumentMoniker": "Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "RelativeToolTip": "Finance\\UserControlFinance\\ControlBarUC.xaml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAcwEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-07T19:33:43.415Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
-              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
               "RelativeToolTip": "Finance\\MainWindow.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJEAAAA5AAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAMwGkAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-07T19:23:03.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AddTransactionView.xaml",
-              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\AddTransactionView.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\AddTransactionView.xaml",
               "RelativeDocumentMoniker": "Finance\\AddTransactionView.xaml",
-              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\AddTransactionView.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\AddTransactionView.xaml",
               "RelativeToolTip": "Finance\\AddTransactionView.xaml",
               "ViewState": "AQIAAE4AAAAAAAAAAAAAAFwAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-07T19:24:07.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReportsView.xaml",
-              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
-              "RelativeDocumentMoniker": "Finance\\ReportsView.xaml",
-              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
-              "RelativeToolTip": "Finance\\ReportsView.xaml",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAMwJEAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-07T19:23:40.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T19:24:07.743Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ReportsView.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeDocumentMoniker": "Finance\\ReportsView.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeToolTip": "Finance\\ReportsView.xaml",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAMwJEAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-07T19:23:40.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "BudgetView.xaml",
-              "DocumentMoniker": "E:\\UIT\\QuanLyChiTieu\\Finance\\BudgetView.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BudgetView.xaml",
               "RelativeDocumentMoniker": "Finance\\BudgetView.xaml",
-              "ToolTip": "E:\\UIT\\QuanLyChiTieu\\Finance\\BudgetView.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BudgetView.xaml",
               "RelativeToolTip": "Finance\\BudgetView.xaml",
               "ViewState": "AQIAAC8AAAAAAAAAAAAMwEAAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-07T19:22:46.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T19:22:46.904Z"
             }
           ]
         }
