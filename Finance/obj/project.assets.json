@@ -1931,24 +1931,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Quan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\Finance.csproj",
+      "projectUniqueName": "E:\\UIT\\QuanLyChiTieu\\Finance\\Finance.csproj",
       "projectName": "Finance",
-      "projectPath": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\Finance.csproj",
-      "packagesPath": "C:\\Users\\Quan\\.nuget\\packages\\",
-      "outputPath": "F:\\UIT-K18\\nam2\\LTTQ\\FinanceManagement\\QuanLyChiTieu\\Finance\\obj\\",
+      "projectPath": "E:\\UIT\\QuanLyChiTieu\\Finance\\Finance.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "E:\\UIT\\QuanLyChiTieu\\Finance\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Quan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1956,7 +1951,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

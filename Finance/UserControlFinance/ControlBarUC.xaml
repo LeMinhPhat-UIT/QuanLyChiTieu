@@ -13,12 +13,18 @@
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="MouseLeftButtonDown">
             <i:InvokeCommandAction Command="{Binding MouseMoveWindowCommand}"
-                                       CommandParameter="{Binding ElementName=ucControlBar}" />
+                                   CommandParameter="{Binding ElementName=ucControlBar}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
 
     <Grid>
-        <materialDesign:ColorZone Mode="PrimaryDark">
+        <materialDesign:ColorZone Mode="Custom">
+            <materialDesign:ColorZone.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#FF6EC1" Offset="0.0"/>
+                    <GradientStop Color="#2196F3" Offset="1.0"/>
+                </LinearGradientBrush>
+            </materialDesign:ColorZone.Background>
             <DockPanel>
                 <StackPanel DockPanel.Dock="Right" Background="Transparent" Orientation="Horizontal">
                     <StackPanel.Resources>
@@ -27,29 +33,38 @@
                             <Setter Property="Width" Value="40"></Setter>
                         </Style>
                     </StackPanel.Resources>
-                    
-                    <Button Command="{Binding MinimizeWindowCommand}"
+
+                    <Button Background="Transparent" BorderThickness="0" BorderBrush="Transparent"
+                            Command="{Binding MinimizeWindowCommand}"
                             CommandParameter="{Binding ElementName=ucControlBar}"
-                            ToolTip="Đóng" ToolBar.OverflowMode="AsNeeded">
+                            ToolTip="Thu nhỏ" ToolBar.OverflowMode="AsNeeded"
+                            Foreground="AntiqueWhite">
                         <materialDesign:PackIcon Kind="WindowMinimize" />
                     </Button>
 
-                    <Button Command="{Binding MaximizeWindowCommand}"
+                    <Button Background="Transparent" BorderThickness="0" BorderBrush="Transparent"
+                            Command="{Binding MaximizeWindowCommand}"
                             CommandParameter="{Binding ElementName=ucControlBar}"
-                            ToolTip="Đóng" ToolBar.OverflowMode="AsNeeded">
+                            ToolTip="Phóng to" ToolBar.OverflowMode="AsNeeded"
+                            Foreground="AntiqueWhite">
                         <materialDesign:PackIcon Kind="WindowMaximize" />
                     </Button>
 
-                    <Button Command="{Binding CloseWindowCommand}"
+                    <Button Background="Transparent" BorderThickness="0" BorderBrush="Transparent"
+                            Command="{Binding CloseWindowCommand}"
                             CommandParameter="{Binding ElementName=ucControlBar}"
-                            ToolTip="Đóng" ToolBar.OverflowMode="AsNeeded">
+                            ToolTip="Đóng" ToolBar.OverflowMode="AsNeeded"
+                            Foreground="AntiqueWhite">
                         <materialDesign:PackIcon Kind="WindowClose" />
                     </Button>
                 </StackPanel>
 
-                <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                    <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
-                    <TextBlock VerticalAlignment="Center" Margin="16 0 0 0" Text="{Binding Tag, ElementName=ucControlBar}">
+                <StackPanel DockPanel.Dock="Right" Orientation="Vertical">
+                    <TextBlock VerticalAlignment="Center" 
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold"
+                               Foreground="White"
+                               Margin="125 5 0 0" Text="{Binding Tag, ElementName=ucControlBar}">
                     </TextBlock>
                 </StackPanel>
 
