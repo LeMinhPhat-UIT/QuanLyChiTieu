@@ -49,8 +49,8 @@ namespace Finance.ViewModel
                                       .OrderBy(date => date) 
                                       .ToList();
 
-            var IncomeData = StatisticBLL.GetDataByMonth("Thu nhập");
-            var ExpenseData = StatisticBLL.GetDataByMonth("Chi tiêu");
+            var IncomeData = StatisticBLL.GetDataByMonth("Thu nhập", null, null);
+            var ExpenseData = StatisticBLL.GetDataByMonth("Chi tiêu", null, null);
             SeriesCollection = new SeriesCollection()
             {
                 new LineSeries

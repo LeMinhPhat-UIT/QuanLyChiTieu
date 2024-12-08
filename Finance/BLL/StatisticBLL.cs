@@ -18,25 +18,33 @@ namespace BLL
         public static List<DateOnly> GetDateHasData(DateTime startDate, DateTime endDate)
             => StatisticDAL.GetDateHasData(startDate, endDate);
 
-        public static List<Tuple<string, double>> GetDataByMonth(string moneyFlow)
+        public static List<Tuple<DateOnly, double>> GetDataByMonth(string moneyFlow, DateTime? startDate, DateTime? endDate)
         {
-            var allTransactions = TransactionDAL.GetAllTransaction();
+            var tempResult = StatisticDAL.GetDataByDate(moneyFlow, startDate, endDate)
+                                          .ToDictionary(tuple => tuple.Item1, tuple => tuple.Item2);
 
-            var filteredTransactions = allTransactions
-        .Where(t => t.TransactionMoneyFlow == moneyFlow)
-        .ToList();
+            List<Tuple<DateOnly, double>> result = new List<Tuple<DateOnly, double>>();
+            for (int i = 1; i <= 31; i++)
+            {
+                try
+                {
+                    DateOnly date = DateOnly.FromDateTime(new DateTime(startDate?.Year ?? DateTime.Now.Year,
+                                                                       startDate?.Month ?? DateTime.Now.Month, i));
 
-            var groupedByMonth = filteredTransactions
-        .GroupBy(t => new { t.TransactionDate.Year, t.TransactionDate.Month })
-        .OrderBy(g => g.Key.Year)
-        .ThenBy(g => g.Key.Month);
-            var result = groupedByMonth
-                        .Select(g => new Tuple<string, double>(
-                        $"{g.Key.Month:00}/{g.Key.Year}",
-                        g.Sum(t => t.TransactionMoney)
-                        ))
-                        .ToList();
-
+                    if (tempResult.ContainsKey(date))
+                    {
+                        result.Add(new Tuple<DateOnly, double>(date, tempResult[date]));
+                    }
+                    else
+                    {
+                        result.Add(new Tuple<DateOnly, double>(date, 0));
+                    }
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    break;
+                }
+            }
             return result;
         }
     }

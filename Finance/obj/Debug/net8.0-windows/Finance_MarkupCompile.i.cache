@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\UIT\Clone Github\QuanLyChiTieu\Finance\obj\Debug\net8.0-windows\
+F:\UIT-K18\nam2\LTTQ\workspace\QuanLyChiTieu\Finance\obj\Debug\net8.0-windows\
 Finance
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-E:\UIT\Clone Github\QuanLyChiTieu\Finance\App.xaml
+F:\UIT-K18\nam2\LTTQ\workspace\QuanLyChiTieu\Finance\App.xaml
 8969803682
 
 29-1464236691
-2211699267916
+221-1139769061
 AddTransactionView.xaml;BudgetView.xaml;LoginWindow.xaml;MainWindow.xaml;ReportsView.xaml;ResourceXAML\MainResource.xaml;UserControlFinance\ControlBarUC.xaml;UserWindow.xaml;
 
 True
