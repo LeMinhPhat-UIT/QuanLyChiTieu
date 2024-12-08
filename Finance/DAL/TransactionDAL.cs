@@ -83,9 +83,8 @@ namespace DAL
                 string updateWalletQuery = @"UPDATE Wallet
                                      SET Wallet.Money = Wallet.Money + 
                                         (CASE 
-                                           WHEN @MoneyFlow = 'Thu nhập' THEN @TransactionMoney
                                            WHEN @MoneyFlow = 'Chi tiêu' THEN -@TransactionMoney
-                                           ELSE 0 
+                                           ELSE @TransactionMoney
                                         END),
                                          UpdateDate = GETDATE()
                                      WHERE ID = @WalletID";
