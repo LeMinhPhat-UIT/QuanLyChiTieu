@@ -101,6 +101,11 @@ namespace Finance.ViewModel
 
         private void UpdateWallet()
         {
+            if (SelectedWallets == null || !SelectedWallets.Any())
+            {
+                MessageBox.Show("Vui lòng chọn ví", "Thông báo", MessageBoxButton.OK);
+                return;
+            }
             if (SelectedWallets.Count == 1)
             {
                 WalletBLL.UpdateWallet(SelectedWallets[0].ID, WalletName, SelectedWalletType, Money.ToString(), UpdateDate);
@@ -110,6 +115,11 @@ namespace Finance.ViewModel
 
         private void DeleteWallet()
         {
+            if(SelectedWallets == null || !SelectedWallets.Any())
+            {
+                MessageBox.Show("Vui lòng chọn ví", "Thông báo", MessageBoxButton.OK);
+                return;
+            }
             foreach (Wallet wallet in SelectedWallets)
                 WalletBLL.DeleteWallet(wallet.ID);
             WalletList = WalletBLL.LoadWallets();

@@ -162,13 +162,24 @@ namespace Finance.ViewModel
 
         private void DeleteTransaction()
         {
+            
+            if(SelectedTransactions == null || !SelectedTransactions.Any())
+            {
+                MessageBox.Show("Vui lòng chọn giao dịch", "Thông báo",MessageBoxButton.OK);
+                return;
+            }
             TransactionBLL.DeleteTransaction(SelectedTransactions.Select(x=>x.ID).ToList());
             TransactionList = TransactionBLL.GetAllTransactions();
         }
 
         private void EditTransaction()
         {
-            if(SelectedTransactions.Count == 1)
+            if (SelectedTransactions == null || !SelectedTransactions.Any())
+            {
+                MessageBox.Show("Vui long chọn giao dịch", "Thông báo", MessageBoxButton.OK);
+                return;
+            }
+            if (SelectedTransactions.Count == 1)
                 TransactionBLL.UpdateTransaction(SelectedTransactions[0].ID, TransactionName, (double)TransactionMoney, SelectedCatalogMoneyFlow, SelectedCatalogName, SelectedTransactions[0].WalletID, TransactionDate);
             TransactionList = TransactionBLL.GetAllTransactions();
         }

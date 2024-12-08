@@ -21,7 +21,7 @@
         WindowStyle="None"
         x:Name="window"
         
-        Title="Thêm giao dịch" Height="500" Width="800">
+        Title="Thêm Giao Dịch" Height="500" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -84,13 +84,13 @@
 
             <materialDesign:Card Grid.Row="1" Margin="5">
                 <WrapPanel Margin="0 0 0 10">
-                    <Button Command="{Binding AddCommand}" Content="Thêm" Margin="5" Width="100"></Button>
-                    <Button Command="{Binding EditCommand}" Content="Sửa" Margin="5" Width="100"></Button>
-                    <Button Command="{Binding DeleteCommand}" Content="Xóa" Margin="5" Width="100"></Button>
+                    <Button Style="{StaticResource GradientMaterialButtonStyle}" Command="{Binding AddCommand}" Content="Thêm" Margin="5" Width="100"></Button>
+                    <Button Style="{StaticResource GradientMaterialButtonStyle}" Command="{Binding EditCommand}" Content="Sửa" Margin="5" Width="100"></Button>
+                    <Button Style="{StaticResource GradientMaterialButtonStyle}" Command="{Binding DeleteCommand}" Content="Xóa" Margin="5" Width="100"></Button>
                 </WrapPanel>
             </materialDesign:Card>
 
-            <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
+            <materialDesign:Card Background="#3E4A59" Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <ListView ItemsSource="{Binding TransactionList}" SelectedItem="{Binding SelectedTransactions, Mode=OneWayToSource}" SelectionMode="Multiple" SelectionChanged="TransactionSelectionChanged">
                         <ListView.View>

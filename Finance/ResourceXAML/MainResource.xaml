@@ -1,8 +1,30 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:viewmodel="clr-namespace:Finance.ViewModel"
-
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:local="clr-namespace:Finance"
+                    mc:Ignorable="d"
+                    xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+                    xmlns:uc="clr-namespace:Finance.UserControlFinance"
+                    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     
     >
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
+   <Style x:Key="GradientMaterialButtonStyle" TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}">
+    <Setter Property="Background">
+        <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#CC3700" Offset="0"/>
+                    <GradientStop Color="#D4A017" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+    </Setter>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="Padding" Value="10,5"/>
+    <Setter Property="materialDesign:ButtonAssist.CornerRadius" Value="10"/>
+</Style>
+
 </ResourceDictionary>

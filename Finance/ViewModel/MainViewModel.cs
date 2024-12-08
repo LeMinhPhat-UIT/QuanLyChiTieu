@@ -44,22 +44,24 @@ namespace Finance.ViewModel
 
             List = TransactionBLL.GetAllTransactions();
             List<DateOnly> Labels = TransactionBLL.GetAllTransactions()
-                                                   .Select(x => x.TransactionDate)
-                                                   .Distinct().OrderBy(date=>date)
-                                                   .ToList();
-            List<double> IncomeData = StatisticBLL.GetDataByDate("Thu nhập", null, null).Select(x => x.Item2).ToList();
-            List<double> ExpenseData = StatisticBLL.GetDataByDate("Chi tiêu", null, null).Select(x => x.Item2).ToList();
+                                      .Select(x => new DateOnly(x.TransactionDate.Year, x.TransactionDate.Month, 1)) 
+                                      .Distinct() 
+                                      .OrderBy(date => date) 
+                                      .ToList();
+
+            var IncomeData = StatisticBLL.GetDataByMonth("Thu nhập");
+            var ExpenseData = StatisticBLL.GetDataByMonth("Chi tiêu");
             SeriesCollection = new SeriesCollection()
             {
                 new LineSeries
                 {
                     Title = "Thu nhập",
-                    Values = new ChartValues<double>(IncomeData)
+                    Values = new ChartValues<double>(IncomeData.Select(x => x.Item2))
                 },
                 new LineSeries
                 {
                     Title = "Chi tiêu",
-                    Values = new ChartValues<double>(ExpenseData)
+                    Values = new ChartValues<double>(ExpenseData.Select(x =>x.Item2))
                 }
             };
 

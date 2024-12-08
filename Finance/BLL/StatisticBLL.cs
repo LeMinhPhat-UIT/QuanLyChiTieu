@@ -17,5 +17,27 @@ namespace BLL
 
         public static List<DateOnly> GetDateHasData(DateTime startDate, DateTime endDate)
             => StatisticDAL.GetDateHasData(startDate, endDate);
+
+        public static List<Tuple<string, double>> GetDataByMonth(string moneyFlow)
+        {
+            var allTransactions = TransactionDAL.GetAllTransaction();
+
+            var filteredTransactions = allTransactions
+        .Where(t => t.TransactionMoneyFlow == moneyFlow)
+        .ToList();
+
+            var groupedByMonth = filteredTransactions
+        .GroupBy(t => new { t.TransactionDate.Year, t.TransactionDate.Month })
+        .OrderBy(g => g.Key.Year)
+        .ThenBy(g => g.Key.Month);
+            var result = groupedByMonth
+                        .Select(g => new Tuple<string, double>(
+                        $"{g.Key.Month:00}/{g.Key.Year}",
+                        g.Sum(t => t.TransactionMoney)
+                        ))
+                        .ToList();
+
+            return result;
+        }
     }
 }

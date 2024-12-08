@@ -22,7 +22,7 @@
         WindowStyle="None"
         x:Name="window"
         
-        Title="Thống kê" Height="800" Width="700">
+        Title="Thống Kê" Height="800" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -71,12 +71,12 @@
             </materialDesign:Card>-->
             <!--Element binding từ selected item-->
             <materialDesign:Card Grid.Row="1" Margin="5" Background="LightCyan">
-                <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left">
+                <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left" Foreground="Black">
                     <lvc:CartesianChart.AxisX>
-                        <lvc:Axis Title="Loại chi tiêu" Labels="{Binding Labels}"></lvc:Axis>
+                        <lvc:Axis Title="Loại chi tiêu" Labels="{Binding Labels}" Foreground="Black"></lvc:Axis>
                     </lvc:CartesianChart.AxisX>
                     <lvc:CartesianChart.AxisY>
-                        <lvc:Axis Title="VND" LabelFormatter="{Binding Formatter}"></lvc:Axis>
+                        <lvc:Axis Title="VND" LabelFormatter="{Binding Formatter}" Foreground="Black"></lvc:Axis>
                     </lvc:CartesianChart.AxisY>
                 </lvc:CartesianChart>
             </materialDesign:Card>
@@ -92,12 +92,12 @@
             </materialDesign:Card>
 
             <materialDesign:Card Grid.Row="3" Margin="5" Background="LightCyan">
-                <lvc:CartesianChart Series="{Binding SeriesCollection2}" LegendLocation="Left">
+                <lvc:CartesianChart Series="{Binding SeriesCollection2}" LegendLocation="Left" Foreground="Black">
                     <lvc:CartesianChart.AxisX>
-                        <lvc:Axis Title="Loại thu nhập" Labels="{Binding Labels2}"></lvc:Axis>
+                        <lvc:Axis Title="Loại thu nhập" Labels="{Binding Labels2}" Foreground="Black"></lvc:Axis>
                     </lvc:CartesianChart.AxisX>
                     <lvc:CartesianChart.AxisY>
-                        <lvc:Axis Title="VND" LabelFormatter="{Binding Formatter2}"></lvc:Axis>
+                        <lvc:Axis Title="VND" LabelFormatter="{Binding Formatter2}" Foreground="Black"></lvc:Axis>
                     </lvc:CartesianChart.AxisY>
                 </lvc:CartesianChart>
             </materialDesign:Card>
@@ -128,22 +128,23 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Tổng thu nhập/Ngày: " Grid.Column="0" Margin="5 5 5 15" Foreground="Gray"></TextBlock>
-                        <TextBlock Text="{Binding Income}" Grid.Column="1" Margin="5 5 5 15"></TextBlock>
+                        <TextBlock Text="{Binding Income}" Grid.Column="1" Margin="5 5 5 15" Foreground="Black"></TextBlock>
                     </Grid>
 
 
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="130"></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="69*"></ColumnDefinition>
+                            <ColumnDefinition Width="481*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Tổng chi tiêu/Ngày: " Grid.Column="0" Margin="5 5 5 15" Foreground="Gray"></TextBlock>
-                        <TextBlock Text="{Binding Spend}" Grid.Column="1" Margin="5 5 5 15"></TextBlock>
+                        <TextBlock Text="Tổng chi tiêu/Ngày: " Grid.Column="0" Margin="5,5,5,15" Foreground="Gray"></TextBlock>
+                        <TextBlock Text="{Binding Spend}" Grid.Column="1" Margin="5 5 5 15" Grid.ColumnSpan="2" Foreground="Black"></TextBlock>
                     </Grid>
                 </Grid>
             </materialDesign:Card>
 
-            <materialDesign:Card Grid.Row="6" Margin="5" VerticalAlignment="Stretch">
+            <materialDesign:Card Background="#3E4A59" Grid.Row="6" Margin="5" VerticalAlignment="Stretch">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
                         <ListView.View>
