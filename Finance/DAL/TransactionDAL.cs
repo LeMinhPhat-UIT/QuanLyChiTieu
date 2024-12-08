@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using DTO;
+using System.Windows;
 
 namespace DAL
 {
     public static class TransactionDAL
     {
-        private static readonly string connectionString = "Data Source=AAAAA;Initial Catalog=IT008_Project;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+        private static readonly string connectionString = "Data Source=IDEAPAD5PRO;Initial Catalog=FinanceManagement;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
         public static int CreateTransaction(string transactionName, decimal money, string moneyFlow, string catalog, string walletID, DateTime date)
         {
@@ -76,6 +77,8 @@ namespace DAL
                 // kiem tra so du neu la chi tieu
                 if (transactionMoneyFlow == "Chi tiêu" && walletMoney < transactionMoney)
                 {
+                    MessageBox.Show("Không thể thực hiện giao dịch", "Thông báo", MessageBoxButton.OK);
+                    return;
                     throw new Exception("Số dư ví không đủ để thực hiện giao dịch.");
                 }
 
@@ -219,18 +222,25 @@ namespace DAL
             string query = @" SELECT WalletName
                             FROM [Wallet]
                             WHERE ID = @WalletID";
-            using(SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, conn);
                 command.Parameters.AddWithValue("@WalletID", WalletID);
                 conn.Open();
                 object res = command.ExecuteScalar();
-                if(res != null && res != DBNull.Value)
+                if (res != null && res != DBNull.Value)
                 {
                     walletName = res.ToString();
                 }
             }
             return walletName;
         }
+        public static Transaction GetTransactionByID(int transactionID)
+        {
+            Transaction transaction = null;
+
+            return transaction;
+        }
+
     }
 }
