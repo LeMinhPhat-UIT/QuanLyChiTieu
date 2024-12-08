@@ -13,6 +13,96 @@ namespace DAL
     {
         private static readonly string connectionString = "Data Source=AAAAA;Initial Catalog=IT008_Project;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
+        public static Transaction GetTransactionByID(int transactionID)
+        {
+            Transaction transaction = null;
+
+            string query = @"
+        SELECT ID, TransactionName, TransactionMoney, TransactionMoneyFlow, TransactionCatalog, WalletID, WalletName, TransactionDate
+        FROM Transaction
+        WHERE ID = @TransactionID;
+    ";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TransactionID", transactionID);
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            transaction = new Transaction
+                            {
+                                ID = reader.GetInt32(0),
+                                TransactionName = reader.GetString(1),
+                                TransactionMoney = (double)reader.GetDecimal(2),
+                                TransactionMoneyFlow = reader.GetString(3),
+                                TransactionCatalog = reader.GetString(4),
+                                WalletID = reader.GetString(5),
+                                WalletName = reader.GetString(6),
+                                TransactionDate = DateOnly.FromDateTime(reader.GetDateTime(7))
+                            };
+                        }
+                    }
+                }
+            }
+
+            return transaction;
+        }
+
+        public static void AddTransaction(int transactionID, int walletID)
+        {
+            string transactionQuery = @"
+        SELECT Money, TransactionMoneyFlow 
+        FROM [Transaction] 
+        WHERE ID = @TransactionID;
+    ";
+
+            string updateWalletQuery = @"
+        UPDATE Wallet
+        SET Wallet.Money = Wallet.Money + 
+            (CASE 
+               WHEN @MoneyFlow = 'Thu nhập' THEN @TransactionMoney
+               WHEN @MoneyFlow = 'Chi tiêu' THEN -@TransactionMoney
+               ELSE 0 
+            END),
+            UpdateDate = GETDATE()
+        WHERE ID = @WalletID;
+    ";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                using (SqlCommand transactionCmd = new SqlCommand(transactionQuery, conn))
+                {
+                    transactionCmd.Parameters.AddWithValue("@TransactionID", transactionID);
+                    using (SqlDataReader reader = transactionCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            double transactionMoney = (double)(decimal)reader["Money"];
+                            string transactionMoneyFlow = reader["TransactionMoneyFlow"].ToString();
+
+                            reader.Close();
+
+                            using (SqlCommand updateCmd = new SqlCommand(updateWalletQuery, conn))
+                            {
+                                updateCmd.Parameters.AddWithValue("@MoneyFlow", transactionMoneyFlow);
+                                updateCmd.Parameters.AddWithValue("@TransactionMoney", transactionMoney);
+                                updateCmd.Parameters.AddWithValue("@WalletID", walletID);
+                                updateCmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
         public static int CreateTransaction(string transactionName, decimal money, string moneyFlow, string catalog, string walletID, DateTime date)
         {
             int transactionId;
@@ -37,67 +127,6 @@ namespace DAL
             }
 
             return transactionId;
-        }
-
-        public static void AddTransaction(int transactionID, int walletID)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-
-                //lay thong tin transaction
-                string transactionQuery = @"SELECT Money, TransactionMoneyFlow FROM [Transaction] WHERE ID = @TransactionID";
-                SqlCommand transactionCmd = new SqlCommand(transactionQuery, conn);
-                transactionCmd.Parameters.AddWithValue("@TransactionID", transactionID);
-
-                SqlDataReader transactionReader = transactionCmd.ExecuteReader();
-                if (!transactionReader.Read())
-                {
-                    throw new Exception("Giao dịch không tồn tại.");
-                }
-
-                double transactionMoney = (double)(decimal)transactionReader["Money"];
-                string transactionMoneyFlow = transactionReader["TransactionMoneyFlow"].ToString();
-                transactionReader.Close();
-
-                // lay thong wallet
-                string walletQuery = @"SELECT Money FROM [Wallet] WHERE ID = @WalletID";
-                SqlCommand walletCmd = new SqlCommand(walletQuery, conn);
-                walletCmd.Parameters.AddWithValue("@WalletID", walletID);
-
-                SqlDataReader walletReader = walletCmd.ExecuteReader();
-                if (!walletReader.Read())
-                {
-                    throw new Exception("Ví tiền không tồn tại.");
-                }
-
-                double walletMoney = (double)(decimal)walletReader["Money"];
-                walletReader.Close();
-
-                // kiem tra so du neu la chi tieu
-                if (transactionMoneyFlow == "Chi tiêu" && walletMoney < transactionMoney)
-                {
-                    MessageBox.Show("Không thể thực hiện giao dịch", "Thông báo", MessageBoxButton.OK);
-                    return;
-                    throw new Exception("Số dư ví không đủ để thực hiện giao dịch.");
-                }
-
-                // cap nhat so tien
-                string updateWalletQuery = @"UPDATE Wallet
-                                     SET Wallet.Money = Wallet.Money + 
-                                        (CASE 
-                                           WHEN @MoneyFlow = 'Chi tiêu' THEN -@TransactionMoney
-                                           ELSE @TransactionMoney
-                                        END),
-                                         UpdateDate = GETDATE()
-                                     WHERE ID = @WalletID";
-
-                SqlCommand updateCmd = new SqlCommand(updateWalletQuery, conn);
-                updateCmd.Parameters.AddWithValue("@MoneyFlow", transactionMoneyFlow);
-                updateCmd.Parameters.AddWithValue("@TransactionMoney", transactionMoney);
-                updateCmd.Parameters.AddWithValue("@WalletID", walletID);
-                updateCmd.ExecuteNonQuery();
-            }
         }
 
         public static void DeleteTransaction(List<int> transactionIDs)
@@ -235,12 +264,5 @@ namespace DAL
             }
             return walletName;
         }
-        public static Transaction GetTransactionByID(int transactionID)
-        {
-            Transaction transaction = null;
-
-            return transaction;
-        }
-
     }
 }

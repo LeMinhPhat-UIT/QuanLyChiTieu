@@ -12,6 +12,18 @@ namespace BLL
 {
     public static class TransactionBLL
     {
+        public static Transaction GetTransactionByID(int transactionID)
+        {
+            return TransactionDAL.GetTransactionByID(transactionID);
+        }
+        public static void AddTransaction(int transactionID, int walletID)
+        {
+            Transaction transaction = TransactionDAL.GetTransactionByID(transactionID);
+            Wallet wallet = WalletBLL.GetWalletByID(walletID);
+            if (transaction.TransactionMoneyFlow == "Chi tiêu" && transaction.TransactionMoney > wallet.Money)
+                return;
+            TransactionDAL.AddTransaction(transactionID, walletID);
+        }
         static int signal = 0; // dong nay hoi ngu =))
         public static int CreateTransaction(string transactionName, double money, string moneyFlow, string catalog, string walletID, DateTime date)
         {
@@ -25,16 +37,6 @@ namespace BLL
                 return 0;
             }
             return TransactionDAL.CreateTransaction(transactionName, Math.Round((decimal)money, 2), moneyFlow, catalog, walletID, date);
-        }
-
-        public static void AddTransaction(int transactionID, int walletID)
-        {
-            if (signal == 1)
-            {
-                signal = 0;
-                return;
-            }
-            TransactionDAL.AddTransaction(transactionID, walletID);
         }
 
         public static void DeleteTransaction(List<int> transactionIDs)
