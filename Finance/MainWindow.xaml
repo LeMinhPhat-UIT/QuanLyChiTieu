@@ -69,7 +69,7 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Column="1" Background="#C8E6C9" Command="{Binding AddTransactionViewCommand}" ToolTip="Thêm giao dịch" >
+                    <Button Grid.Column="1" Background="LightGoldenrodYellow" Command="{Binding AddTransactionViewCommand}" ToolTip="Thêm giao dịch" >
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -86,7 +86,7 @@
                         </Grid>
                     </Button>
 
-                    <Button Grid.Column="0" Background="#D9D9D9"  Command="{Binding BudgetViewCommand}" ToolTip="Số dư">
+                    <Button Grid.Column="0" Background="LightGoldenrodYellow"  Command="{Binding BudgetViewCommand}" ToolTip="Số dư">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -103,7 +103,7 @@
                         </Grid>
                     </Button>
 
-                    <Button Grid.Column="2" Background="#FFF9C4" Command="{Binding ReportsViewCommand}" ToolTip="Thống kê">
+                    <Button Grid.Column="2" Background="LightGoldenrodYellow" Command="{Binding ReportsViewCommand}" ToolTip="Thống kê">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>

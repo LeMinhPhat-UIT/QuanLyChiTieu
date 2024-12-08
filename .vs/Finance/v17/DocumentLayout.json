@@ -1,59 +1,39 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "D:\\Project\\QuanLyChiTieu\\",
-  "Documents": [],
-=======
   "WorkspaceRootPath": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\dal\\transactiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\dal\\transactiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\reportsview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\bll\\transactionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\bll\\transactionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\bll\\walletbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\bll\\walletbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\reportsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\reportsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\bll\\statisticbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\bll\\statisticbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|e:\\uit\\clone github\\quanlychitieu\\finance\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B0FA09B-781D-4796-AE88-0CA1C53AA5D1}|Finance\\Finance.csproj|solutionrelative:finance\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
->>>>>>> b33f3da50c0db89e411c78fb9968d9202311db02
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-<<<<<<< HEAD
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-=======
-          "DockedWidth": 180,
           "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
->>>>>>> b33f3da50c0db89e411c78fb9968d9202311db02
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-<<<<<<< HEAD
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-=======
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
@@ -67,55 +47,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WalletBLL.cs",
-              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BLL\\WalletBLL.cs",
-              "RelativeDocumentMoniker": "Finance\\BLL\\WalletBLL.cs",
-              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BLL\\WalletBLL.cs",
-              "RelativeToolTip": "Finance\\BLL\\WalletBLL.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T14:00:12.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TransactionDAL.cs",
-              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\DAL\\TransactionDAL.cs",
-              "RelativeDocumentMoniker": "Finance\\DAL\\TransactionDAL.cs",
-              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\DAL\\TransactionDAL.cs",
-              "RelativeToolTip": "Finance\\DAL\\TransactionDAL.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAWwCAAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T13:52:25.876Z",
+              "Title": "ReportsView.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeDocumentMoniker": "Finance\\ReportsView.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeToolTip": "Finance\\ReportsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T15:54:48.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TransactionBLL.cs",
-              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BLL\\TransactionBLL.cs",
-              "RelativeDocumentMoniker": "Finance\\BLL\\TransactionBLL.cs",
-              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BLL\\TransactionBLL.cs",
-              "RelativeToolTip": "Finance\\BLL\\TransactionBLL.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAYwBUAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T13:49:48.581Z",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "RelativeToolTip": "Finance\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T15:52:22.897Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportsView.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeDocumentMoniker": "Finance\\ReportsView.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\ReportsView.xaml",
+              "RelativeToolTip": "Finance\\ReportsView.xaml",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAAJkAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T15:54:53.154Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "StatisticBLL.cs",
-              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BLL\\StatisticBLL.cs",
-              "RelativeDocumentMoniker": "Finance\\BLL\\StatisticBLL.cs",
-              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\BLL\\StatisticBLL.cs",
-              "RelativeToolTip": "Finance\\BLL\\StatisticBLL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T13:49:39.753Z",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Finance\\MainWindow.xaml",
+              "ToolTip": "E:\\UIT\\Clone Github\\QuanLyChiTieu\\Finance\\MainWindow.xaml",
+              "RelativeToolTip": "Finance\\MainWindow.xaml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAMwGkAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T15:52:30.055Z",
               "EditorCaption": ""
->>>>>>> b33f3da50c0db89e411c78fb9968d9202311db02
             }
           ]
         }
