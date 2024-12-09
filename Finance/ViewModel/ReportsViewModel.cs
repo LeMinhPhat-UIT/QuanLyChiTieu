@@ -7,6 +7,7 @@ using LiveCharts.Wpf;
 using DTO;
 using BLL;
 using LiveCharts;
+using System.Globalization;
 
 namespace Finance.ViewModel
 {
@@ -51,8 +52,8 @@ namespace Finance.ViewModel
             Formatter = value => $"{value:#,##0.##} ₫";
             Formatter2 = value => $"{value:#,##0.##} ₫";
 
-            Income = IncomeData.Sum().ToString();
-            Spend = ExpenseData.Sum().ToString();
+            Income = IncomeData.Sum().ToString("C", new CultureInfo("vi-VN"));
+            Spend = ExpenseData.Sum().ToString("C", new CultureInfo("vi-VN"));
 
             List = TransactionBLL.GetAllTransactions()
                                  .Where(x=>x.TransactionDate==DateOnly.FromDateTime(DateTime.Now.Date))

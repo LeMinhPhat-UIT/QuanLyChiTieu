@@ -96,22 +96,22 @@ namespace Finance.ViewModel
 
         private void Filtered()
         {
-            SeriesCollection.Clear();
-            Labels = StatisticBLL.GetDateHasData(StartDate, EndDate);
+            //SeriesCollection.Clear();
+            //Labels = StatisticBLL.GetDateHasData(StartDate, EndDate);
 
-            List<double> IncomeData = StatisticBLL.GetDataByDate("Thu nhập", StartDate, EndDate).Select(x => x.Item2).ToList();
-            List<double> ExpenseData = StatisticBLL.GetDataByDate("Chi tiêu", StartDate, EndDate).Select(x => x.Item2).ToList();
+            //List<double> IncomeData = StatisticBLL.GetDataByDate("Thu nhập", StartDate, EndDate).Select(x => x.Item2).ToList();
+            //List<double> ExpenseData = StatisticBLL.GetDataByDate("Chi tiêu", StartDate, EndDate).Select(x => x.Item2).ToList();
 
-            SeriesCollection.Add(new LineSeries()
-            {
-                Title = "Thu nhập",
-                Values = new ChartValues<double>(IncomeData)
-            });
-            SeriesCollection.Add(new LineSeries()
-            {
-                Title = "Chi tiêu",
-                Values = new ChartValues<double>(ExpenseData)
-            });
+            //SeriesCollection.Add(new LineSeries()
+            //{
+            //    Title = "Thu nhập",
+            //    Values = new ChartValues<double>(IncomeData)
+            //});
+            //SeriesCollection.Add(new LineSeries()
+            //{
+            //    Title = "Chi tiêu",
+            //    Values = new ChartValues<double>(ExpenseData)
+            //});
             List = TransactionBLL.GetAllTransactions()
                                  .Where(x =>
                                     x.TransactionDate >= DateOnly.FromDateTime(StartDate)

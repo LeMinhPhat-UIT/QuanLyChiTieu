@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vpxgt7TKo0Q=",
+  "dgSpecHash": "MJSJQd7lYf0=",
   "success": true,
-  "projectFilePath": "F:\\UIT-K18\\nam2\\LTTQ\\workspace\\QuanLyChiTieu\\Finance\\Finance.csproj",
+  "projectFilePath": "F:\\UIT-K18\\nam2\\LTTQ\\thi\\QuanLyChiTieu\\Finance\\Finance.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Quan\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Quan\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
